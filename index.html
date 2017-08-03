@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="public/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono" rel="stylesheet">
+        <link rel="stylesheet" href="public/font-awesome/css/font-awesome.min.css">
+        <title>SamBeeTech</title>
+    </head>
+    <body   id="particles-js">
+        <div class="container">
+            <nav class="navbar navbar-toggleable-sm fixed-top navbar-inverse px-5 shrinkBack">
+                <!--navbar-inverse bg-inverse-->
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navBar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <h1 id="titleName">SamBeeTech</h1>
+
+                <div class="collapse navbar-collapse" id="navBar">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+        </div><!--main nav-->
+        <section id="welcomeText" class="py-5">
+            <div class="container  text-center">
+                <div class="col-md-6 m-auto">
+                    <h4 class="display-4">UI / UX <br> WEB DEVELOPER</h4>
+                    <hr>
+                <span id="typed" class="typecss"></span>
+                </div>
+            </div>
+        </section>
+        
+        <section id="resources">
+           <div class="container">
+               <div class="row">
+                   <div class="col-md-1"><i class="fa fa-code"></i></div>
+                   <div class="col-md-1"><i class="fa fa-code"></i></div>
+                   <div class="col-md-1"><i class="fa fa-code"></i></div>
+                   <div class="col-md-1"><i class="fa fa-code"></i></div>
+                   <div class="col-md-1"><i class="fa fa-code"></i></div>
+                   <div class="col-md-1"><i class="fa fa-code"></i></div>
+                   <div class="col-md-1"><i class="fa fa-code"></i></div>
+                   <div class="col-md-1"><i class="fa fa-code"></i></div>
+                   <div class="col-md-1"><i class="fa fa-code"></i></div>
+                   <div class="col-md-1"><i class="fa fa-code"></i></div>
+                   <div class="col-md-1"><i class="fa fa-code"></i></div>
+                   <div class="col-md-1"><i class="fa fa-code"></i></div>
+               </div>
+           </div>
+        </section>
+
+
+        <script type="text/javascript" src="public/jquery.min.js"></script>
+        <script type="text/javascript" src="public/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/shrink.js"></script>
+        <script type="text/javascript" src="public/particles.js-master/particles.js"></script>
+        <script type="text/javascript" src="particlejs.js"></script>
+        <script type="text/javascript" src="lib/typed.js"></script>
+        <script>
+            var typed = new Typed('#typed', {
+                strings: ["Front end", "Back end" , "Wordpress" , "SEO ^1000"],
+                startDelay:2000,
+                typeSpeed: 100,
+                //                backSpeed: 50,
+                fadeOut: true,
+                onComplete: () => {
+                    $('#typed').html('<button class="btn btn-lg btn-danger hireBtn"> &raquo; Hire me </button>');
+                }
+            });
+        </script>
+
+    </body>
+</html>

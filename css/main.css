@@ -1,0 +1,82 @@
+html {
+    width: 100%;
+    height: 100%;
+    background: none;
+}
+
+{
+    background: url('https://images.pexels.com/photos/214050/pexels-photo-214050.jpeg?w=940&h=650&auto=compress&cs=tinysrgb') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+    z-index: 999;
+}
+
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    background-color: #303;
+    background: url("https://images.pexels.com/photos/214050/pexels-photo-214050.jpeg?w=940&h=650&auto=compress&cs=tinysrgb") no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-position: 50% 50%;
+}
+
+.shrink {
+    background: #222;
+/*    padding: 10px ;*/
+    font-weight: 700;
+    /*    transition-timing-function: ease-in;*/
+    -webkit-transition: width 2s;
+    transition: background 2s;
+    /*    transform: translateY(130%);*/
+}
+
+h1,
+.shrinkBack {
+    color: #333aaa;
+    background: transparent;
+    -webkit-transition: width 2s;
+    transition: background 2s;
+}
+
+#titleName {
+    font-family: "Droid Sans Mono";
+    color: #aaa;
+    padding: 5px;
+    border-radius: 40px;
+}
+
+#welcomeText .container h4 {
+    color: #ddd;
+    text-align: center;
+/*    margin-top: 200px;*/
+/*    padding: 100px;*/
+
+}
+
+
+.typecss {
+    z-index: 99;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+    color: #eee;
+}
+
+.hireBtn {
+    font-weight: 700;
+    transition: ease-in-out .5s;
+}
+
+#resources {
+    
+}
+#resources i {
+    padding: 100px;
+    border: 1px solid red;
+    color:red;
+    font-size: 15px;
+}
