@@ -1,8 +1,9 @@
-html {
+html, body {
     /*    width: 100%;*/
     height: 100%;
-    margin: 0 auto;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    widows: 95%;
 }
 
 {
@@ -10,59 +11,60 @@ html {
 }
 
 body {
-    /*    background: url('https://images.pexels.com/photos/214050/pexels-photo-214050.jpeg?w=940&h=650&auto=compress&cs=tinysrgb') no-repeat center center fixed;*/
-    /*    -webkit-background-size: cover;*/
-    /*    background-size: cover;*/
     background: #111;
-    padding-top: 10px;
-    margin: 0;
+    margin-top: 10px;
 }
 
 canvas {
     display:block;
-    background: ;
     position: fixed;
     z-index: -1;
 }
 #particles-js {
-    width: 100%;
+    width: 90%;
     height: 90%;
     position: absolute;
-    background-attachment: fixed;
     z-index: -10;
     top: 0;
     left: 0;
 }
 
 .shrink {
-    border:1px solid red;
     background: #323;
     font-weight: 700;
-    -webkimt-transition:2s;
-    transition: 2s;
+    -webkit-transition: 2s;
+    transition:2s;
+    margin: 0;
+    padding: 0 ;
+
+}
+
+.navbar {
+    width: 100%;
+    padding-top: 20px;
 }
 
 h1,
 .shrinkBack {
-    border: 1px solid green;
     color: #333aaa;
     background: transparent;
     -webkit-transition: 2s;
-    transition: background 2s;
+    transition: 2s;
 }
 
-
 #titleName {
+    top:-10px;
     font-family: monospace;
     color: #aaa;
-    padding: 0;
-    margin: 0;
+    padding: 10px;
+    /*    border: 1px solid green;*/
 }
 
 
 #welcomeText .container {
     margin-top: 200px;
     margin-bottom: 300px;
+    width: 90%;
 }
 
 
@@ -70,11 +72,11 @@ h1,
 #welcomeText .container h4 {
     color: #ddd;
     text-align: center;   
-
 }
 
 
 .typecss {
+    font-family: 'comic sans';
     z-index: 99;
     text-align: center;
     font-size: 32px;
@@ -87,10 +89,9 @@ h1,
     transition: ease-in-out .5s;
 }
 
-#resources {
-}
 .icon {
-    padding: 10px;
+    margin: 0 0 !important;
+    padding: 10px 0;
     font-size: 5em;
     border: 1px solid #000;
     border-radius: 20px;
@@ -98,10 +99,9 @@ h1,
 
 #resourcesTitle {
     color: #ddd;
-    margin: 0;
-    padding: 0 0;
+    margin: 0 ;
+    padding: 0 ;
 }
-
 #proPic {
     border-radius: 50%;
     -moz-box-shadow:     50px 0  5px #aaa;
@@ -119,8 +119,19 @@ h1,
     color: #111;
 }
 
+.mainContent .row { 
+    border: 1px solid red;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.col-lg-3 {
+    border: 1px solid green;
+    padding: 0 0 !important;
+    margin:  0 0 !important;
+}
 .mainContent {
-    padding: 10px 5px 10px 5px;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 30px;
+    padding: 10px 0;
+    margin: 0 0 !important;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
 }
