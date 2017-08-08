@@ -1,8 +1,10 @@
-html {
+html, body {
     /*    width: 100%;*/
     height: 100%;
-    margin: 0 auto;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+
+
 }
 
 {
@@ -10,53 +12,52 @@ html {
 }
 
 body {
-    /*    background: url('https://images.pexels.com/photos/214050/pexels-photo-214050.jpeg?w=940&h=650&auto=compress&cs=tinysrgb') no-repeat center center fixed;*/
-    /*    -webkit-background-size: cover;*/
-    /*    background-size: cover;*/
     background: #111;
-    padding-top: 10px;
-    margin: 0;
+    margin-top: 10px;
 }
 
 canvas {
     display:block;
-    background: ;
     position: fixed;
     z-index: -1;
 }
 #particles-js {
-    width: 100%;
+    width: 90%;
     height: 90%;
     position: absolute;
-    background-attachment: fixed;
     z-index: -10;
     top: 0;
     left: 0;
 }
 
 .shrink {
-    border:1px solid red;
     background: #323;
     font-weight: 700;
-    -webkimt-transition:2s;
-    transition: 2s;
+    -webkit-transition: 2s;
+    transition:2s;
+    margin: 0;
+    padding: 0 ;
+
+}
+
+.navbar {
+    width: 100%;
+    padding-top: 20px;
 }
 
 h1,
 .shrinkBack {
-    border: 1px solid green;
     color: #333aaa;
     background: transparent;
     -webkit-transition: 2s;
-    transition: background 2s;
+    transition: 2s;
 }
 
-
 #titleName {
+    top:-10px;
     font-family: monospace;
     color: #aaa;
-    padding: 0;
-    margin: 0;
+    padding: 10px;
 }
 
 
@@ -70,11 +71,11 @@ h1,
 #welcomeText .container h4 {
     color: #ddd;
     text-align: center;   
-
 }
 
 
 .typecss {
+    font-family: 'comic sans';
     z-index: 99;
     text-align: center;
     font-size: 32px;
@@ -84,43 +85,169 @@ h1,
 
 .hireBtn {
     font-weight: 700;
+    -webkit-transition: ease-in-out .5s;
     transition: ease-in-out .5s;
 }
 
-#resources {
-}
 .icon {
-    padding: 10px;
+    font-size: 0;
+   
+}
+
+profile-social-icon {
+    border: 1px solid red;
+}
+
+.iconEffect {
     font-size: 5em;
-    border: 1px solid #000;
-    border-radius: 20px;
+    -webkit-animation: drop ease-out 500ms forwards;
+    animation: drop all ease 500ms forwards;
+}
+#resources {
+
 }
 
 #resourcesTitle {
-    color: #ddd;
-    margin: 0;
-    padding: 0 0;
+    color: #222;
+    font-size: 2em;
 }
 
 #proPic {
     border-radius: 50%;
-    -moz-box-shadow:     50px 0  5px #aaa;
     -webkit-box-shadow:  0 0 10px #aaa;
-    box-shadow:          0 0 10px #aaa;
+    box-shadow:          0 0 20px #333;
+    margin-bottom: -100px;
+    position: relative;
+    z-index: 99;
 }
 
-.fa.fa-linkedin,
-.fa.fa-twitter, 
-.fa.fa-github {
-    font-size: 2em !important;
+
+.fa.profile-social-icon {
+    font-size: 0;
+   
+}
+
+.fa.show-profile-social-icon {
+     font-size: 2em !important;
 }
 
 .generalFont {
     color: #111;
 }
 
-.mainContent {
-    padding: 10px 5px 10px 5px;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 30px;
+.mainContent{
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
 }
+#resources .mainContent {
+    padding: 10px;
+}
+
+#about .mainContent {
+/*    padding: 100px 10px 10px 10px;*/
+/*    position: relative;*/
+/*    left: 50%;*/
+/*    color: transparent;*/
+/*    background: transparent;*/
+}
+
+.aboutContent {
+    background: transparent;
+    padding: 100px 10px 10px 10px;
+}
+.show-aboutContent {
+    background: #ddd;
+     padding: 100px 10px 10px 10px;
+}
+
+.slide-in {
+    background: #ddd;
+     padding: 100px 10px 10px 10px;
+    -webkit-animation: slide-in 500ms ease-out forwards;
+    animation: slide-in 500ms ease-out  forwards;
+}
+
+@-webkit-keyframes slide-in  {
+
+    0% { 
+        left:50%;
+    }
+     15%{
+        left:60%;
+    }
+    100% {
+        
+       
+        left:0%;
+    }
+}
+
+@keyframes slide-in  {
+
+    0% { 
+        left:50%;
+    }
+    15%{
+        left:-50%;
+    }
+    30% {
+        left:25%;
+    }
+    60% {
+        left:-25%;
+    }
+    90% {
+        left:10%;
+    }
+    50% {
+        left:-10%;
+    }
+    100% {
+            
+        left:0%;
+    }
+}
+
+@-webkit-keyframes drop {
+    0% {
+        font-size: 1em;
+        
+    } 
+    15% {
+        font-size: 2em;
+    } 
+    30% {
+        font-size: 2.5em;
+    } 
+    60% {
+        font-size: 4em;
+    }
+    80% {
+        font-size: 4.5em;
+    }
+    100% {
+        font-size: 5em;
+    }
+}
+
+@keyframes drop {
+    0% {
+        font-size: 1em;
+    } 
+    15% {
+        font-size: 2em;
+    } 
+    30% {
+        font-size: 2.5em;
+    } 
+    60% {
+        font-size: 4em;
+    }
+    80% {
+        font-size: 4.5em;
+    }
+    100% {
+        font-size: 5em;
+    }
+}
+
