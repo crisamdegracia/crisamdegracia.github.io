@@ -1,3 +1,5 @@
+//NAVBAR FADING EFFECTS
+
 $(window).scroll(function(){
 
     if($(document).scrollTop() > 15 ){ 

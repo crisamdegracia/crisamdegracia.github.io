@@ -1,26 +1,29 @@
 html, body {
-    /*    width: 100%;*/
+    width: 100%;
     height: 100%;
     margin: 0 !important;
     padding: 0 !important;
-
-
-}
-
-{
-    border: 1px solid red;
 }
 
 body {
     background: #111;
     margin-top: 10px;
 }
-
+#myName,
+.hireBtn,
+#resourcesTitle,
+#welcomeText .container h4 ,
+.navbar ,
+#titleName {
+  font-family: 'Sedgwick Ave Display', cursive;
+    font-family: 'Cinzel', serif;
+}
 canvas {
     display:block;
     position: fixed;
     z-index: -1;
 }
+
 #particles-js {
     width: 90%;
     height: 90%;
@@ -42,7 +45,8 @@ canvas {
 
 .navbar {
     width: 100%;
-    padding-top: 20px;
+    padding: 20px 10% 1% 10%;
+    
 }
 
 h1,
@@ -55,7 +59,6 @@ h1,
 
 #titleName {
     top:-10px;
-    font-family: monospace;
     color: #aaa;
     padding: 10px;
 }
@@ -83,7 +86,7 @@ h1,
     color: #eee;
 }
 
-.hireBtn {
+.hireBtn { 
     font-weight: 700;
     -webkit-transition: ease-in-out .5s;
     transition: ease-in-out .5s;
@@ -91,7 +94,7 @@ h1,
 
 .icon {
     font-size: 0;
-   
+
 }
 
 profile-social-icon {
@@ -100,22 +103,35 @@ profile-social-icon {
 
 .iconEffect {
     font-size: 5em;
-    -webkit-animation: drop ease-out 500ms forwards;
-    animation: drop all ease 500ms forwards;
+    -webkit-animation: drop   500ms ease forwards;
+    animation: drop 500ms ease  forwards;
+    /*
+    -webkit-animation-delay: 600ms;
+    animation-delay: 600ms;
+    */
 }
-#resources {
-
+#resourcesContent {
+    padding: 0 0;
 }
-
 #resourcesTitle {
-    color: #222;
+    position: relative;
+    top: -1.em;
+    color: #ddd;
     font-size: 2em;
+  
 }
+
+#aboutMeHeader{
+    color: #ddd;
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-family: 'Cinzel', serif;
+}
+
 
 #proPic {
     border-radius: 50%;
-    -webkit-box-shadow:  0 0 10px #aaa;
-    box-shadow:          0 0 20px #333;
+    -webkit-box-shadow:  0 0 10px #111;
+    box-shadow:          0 0 40px #111;
     margin-bottom: -100px;
     position: relative;
     z-index: 99;
@@ -124,45 +140,43 @@ profile-social-icon {
 
 .fa.profile-social-icon {
     font-size: 0;
-   
+
 }
 
 .fa.show-profile-social-icon {
-     font-size: 2em !important;
+    font-size: 2em !important;
 }
 
 .generalFont {
     color: #111;
+    font-size: 1.3em;
 }
 
-.mainContent{
-    background: rgba(255, 255, 255, 0.6);
+.mainContent {
     border-radius: 20px;
+
 }
+
 #resources .mainContent {
     padding: 10px;
-}
-
-#about .mainContent {
-/*    padding: 100px 10px 10px 10px;*/
-/*    position: relative;*/
-/*    left: 50%;*/
-/*    color: transparent;*/
-/*    background: transparent;*/
 }
 
 .aboutContent {
     background: transparent;
     padding: 100px 10px 10px 10px;
 }
+.mobileAboutContent {
+    background: rgba(255,255,255, 0.2);
+    padding: 100px 10px 10px 10px;
+}
 .show-aboutContent {
     background: #ddd;
-     padding: 100px 10px 10px 10px;
+    padding: 100px 10px 10px 10px;
 }
 
 .slide-in {
-    background: #ddd;
-     padding: 100px 10px 10px 10px;
+    background: rgba(255,255,255, 0.2);
+    padding: 100px 10px 10px 10px;
     -webkit-animation: slide-in 500ms ease-out forwards;
     animation: slide-in 500ms ease-out  forwards;
 }
@@ -172,12 +186,12 @@ profile-social-icon {
     0% { 
         left:50%;
     }
-     15%{
+    15%{
         left:60%;
     }
     100% {
-        
-       
+
+
         left:0%;
     }
 }
@@ -203,7 +217,7 @@ profile-social-icon {
         left:-10%;
     }
     100% {
-            
+
         left:0%;
     }
 }
@@ -211,7 +225,7 @@ profile-social-icon {
 @-webkit-keyframes drop {
     0% {
         font-size: 1em;
-        
+
     } 
     15% {
         font-size: 2em;
