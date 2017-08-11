@@ -1,23 +1,59 @@
 html, body {
-    width: 100%;
+    width: 99%;
     height: 100%;
     margin: 0 !important;
     padding: 0 !important;
 }
 
 body {
-    background: #111;
+    background: #ddd;
     margin-top: 10px;
 }
+#aboutMeHeader,
 #myName,
 .hireBtn,
 #resourcesTitle,
 #welcomeText .container h4 ,
 .navbar ,
 #titleName {
-  font-family: 'Sedgwick Ave Display', cursive;
+    font-family: 'Sedgwick Ave Display', cursive;
     font-family: 'Cinzel', serif;
 }
+
+
+/*=================LOADING STYLE=================*/
+.circular-progress-bar {
+    position: relative;
+    margin: 0 auto;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+
+}
+
+.progress-percentage, .progress-text {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) rotate(90deg);
+    transform: translate(-50%, -50%) rotate(90deg);
+    text-align: center;
+    padding: 0px 60px;
+
+}
+
+.progress-percentage {
+    font-size: 60px;
+    left: 60%;
+}
+
+.progress-text {
+    left: 35%;
+    color: #ddd;
+    font-size: 21px;
+}
+
+/*=================LOADING STYLE=================*/
 canvas {
     display:block;
     position: fixed;
@@ -46,8 +82,9 @@ canvas {
 .navbar {
     width: 100%;
     padding: 20px 10% 1% 10%;
-    
+    margin: 0 0;
 }
+
 
 h1,
 .shrinkBack {
@@ -61,15 +98,16 @@ h1,
     top:-10px;
     color: #aaa;
     padding: 10px;
+    font-size: 2em;
 }
-
+#welcomeTitle {
+    font-size: 3em;
+}
 
 #welcomeText .container {
     margin-top: 200px;
     margin-bottom: 300px;
 }
-
-
 
 #welcomeText .container h4 {
     color: #ddd;
@@ -92,39 +130,35 @@ h1,
     transition: ease-in-out .5s;
 }
 
+/*
 .icon {
-    font-size: 0;
-
+font-size: 0;
 }
-
-profile-social-icon {
-    border: 1px solid red;
-}
+*/
 
 .iconEffect {
     font-size: 5em;
     -webkit-animation: drop   500ms ease forwards;
     animation: drop 500ms ease  forwards;
-    /*
-    -webkit-animation-delay: 600ms;
-    animation-delay: 600ms;
-    */
 }
+
 #resourcesContent {
+    background:rgba(255,255,255, 0.2);
     padding: 0 0;
 }
+
+/*DEV TOOLS AND RESOURCES*/
 #resourcesTitle {
-    position: relative;
-    top: -1.em;
+    background: rgba(255,255,000, 0.2);
+    border-radius: 50px;
     color: #ddd;
     font-size: 2em;
-  
+    -webkit-box-shadow: 0 0 50px #111;
+    box-shadow: 0 0 50px #111;
 }
 
 #aboutMeHeader{
-    color: #ddd;
-    font-family: 'Sedgwick Ave Display', cursive;
-    font-family: 'Cinzel', serif;
+    color: #ddd;    
 }
 
 
@@ -136,44 +170,60 @@ profile-social-icon {
     position: relative;
     z-index: 99;
 }
-
+#myName {
+    margin-top: 15px;
+}
 
 .fa.profile-social-icon {
-    font-size: 0;
+    font-size: 3em !important;
 
 }
+/*
 
 .fa.show-profile-social-icon {
-    font-size: 2em !important;
+font-size: 2em !important;
+}
+*/
+/*ABOUT ME======================================*/
+.generalFont {
+    color: #ddd;
+    font-size: 1.3em;
+    padding: ;
 }
 
-.generalFont {
-    color: #111;
-    font-size: 1.3em;
-}
 
 .mainContent {
     border-radius: 20px;
-
 }
 
 #resources .mainContent {
     padding: 10px;
 }
 
+
 .aboutContent {
+    /*    height: 50vh;*/
+    /*    overflow: hidden;*/
     background: transparent;
     padding: 100px 10px 10px 10px;
+}
+.readMoreBtnHide {
+    visibility: hidden;
+}
+
+.readMoreBtn { 
+    visibility: visible;
 }
 .mobileAboutContent {
     background: rgba(255,255,255, 0.2);
     padding: 100px 10px 10px 10px;
 }
+
 .show-aboutContent {
     background: #ddd;
     padding: 100px 10px 10px 10px;
 }
-
+/*ABOUT ME==============================================================*/
 .slide-in {
     background: rgba(255,255,255, 0.2);
     padding: 100px 10px 10px 10px;

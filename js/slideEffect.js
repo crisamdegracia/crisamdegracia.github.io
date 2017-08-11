@@ -1,55 +1,77 @@
-(function(){
-
-    var icon        = $('.icon'),
-        iconOffset  = icon.offset().top/2,
-        fontColor   = $('.generalFont'),
-        resourcesContent = $('#resourcesContent');
-
-    var pEl         = $('.slideEffect');
-    var offsetEl    = pEl.offset().top/2 + 200;
-    var elContent   = $('.aboutContent');
-    var fa          = $('.fa');
-    //    console.log(offsetEl)
-    //    console.log(divEl.position().top/2)
+$(document).ready(function(){
+    var icon                = $('.icon'),
+        iconOffset          = icon.offset().top/2 - 100,
+        //About Container 
+        offsetEl            = $('#aboutMeText').offset().top/2 + 100,
+        elContent           = $('.aboutContent'),
+        fa                  = $('.fa');
 
 
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-        console.log('im in mobile bitch!');
+        iconOffset          = icon.offset().top/2;
+        
+        $('#resourcesContent').hide();
+
+        icon.hide();
+
+        $('#aboutMeText').hide();
+
+        $('.fa.profile-social-icon').hide();
+
+        $(document).scroll(function(e){
+
+            if($(document).scrollTop() > iconOffset){  
+
+                icon.show();
+
+                $('#resourcesContent').show();
+
+                $('.fa.profile-social-icon').show();
+
+                $('#aboutMeText').show();
+
+                icon.addClass('iconEffect');
+            }       
+            
+        })
+//        console.log('im in mobile bitch!');
         elContent.removeClass('aboutContent');
         elContent.addClass('mobileAboutContent');
-        fa.css(
-            'fontSize','2em',
-        )
-        icon.css(
-            'fontSize','5em'
-        )
-        fontColor.css(
-            'color','#ddd'
-        )
-        resourcesContent.css(
-            'background','rgba(255,255,255,0.2)'
-        )
-    } else {
-        $(document).scroll(function(){
 
-            if($(document).scrollTop() > iconOffset){
-                resourcesContent.css(
-                'background','rgba(255,255,255, 0.2)'
-                )
-                icon.removeClass('icon');
+
+    }  else {
+        /*hide icon like Heroku Javascript etc*/
+        /*Hide About me Text*/
+        /*Hide Social  Profile icons Like Github,Twitter, Linkedin*/
+        $('#resourcesContent').hide();
+
+        icon.hide();
+
+        $('#aboutMeText').hide();
+
+        $('.fa.profile-social-icon').hide();
+
+        $(document).scroll(function(e){
+
+            /*if the scrolling go further in the icon resources*/
+            if($(document).scrollTop() > iconOffset){  
+
+                icon.show();
+
+                $('#resourcesContent').show();
+
+                $('.fa.profile-social-icon').show();
+
+
+                $('#aboutMeText').show();
+
                 icon.addClass('iconEffect');
-//                resourcesContent.addClass('slide-in');
+
             }       
 
+            /*if scrolling go further in About then add Animation*/
             if($(document).scrollTop() > offsetEl){
-                fontColor.css(
-                    'color','#ddd'
-                )
-                resourcesContent.css(
-                'background','rgba(255,255,255, 0.2)'
-                )
-                fa.removeClass('profile-social-icon');
-                fa.addClass('show-profile-social-icon');
+
                 elContent.addClass('slide-in');
             }
 
@@ -57,4 +79,5 @@
 
     }
 
-})();
+
+});
