@@ -9,31 +9,32 @@
         <link  href="public/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Cinzel|Sedgwick+Ave+Display" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display" rel="stylesheet">
-        <!--        <link rel="stylesheet" href="public/devicon.min.css">-->
         <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
         <title>SamBeeTech</title>
-    </head>
-    <body>
-       
-       <div class="my-progress-bar"></div>
 
-       
-       
+    </head>
+
+    <body>
+        <div id="overlay" class="container mt-5 pt-5">>
+            <div class="spinner m-auto"></div>
+        </div>
+        <script type="text/javascript" src="js/loading.js"></script>
+
         <div id="particles-js"></div>
         <div class="container">
             <nav class="navbar navbar-toggleable-sm fixed-top navbar-inverse shrinkBack">
                 <!--navbar-inverse bg-inverse-->
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navBar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navBar" aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <h1 id="titleName">SamBeeTech</h1>
 
-                <div class="collapse navbar-collapse" id="navBar">
+                <div class="collapse navbar-collapse"  id="navBar">
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                            <a class="nav-link bg-white" href="#">Home<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#about">About</a>
@@ -61,7 +62,7 @@
             <div class="container mainContent" id="resourcesContent">
                 <div class="text-center">
 
-                    <h4 id="resourcesTitle" class="col-12 col-sm-6 col-md-6 col-lg-6 m-auto text-center">Dev Tools and Resources</h4>
+                    <h4 id="resourcesTitle" class="col-12 col-sm-12 col-md-12 col-lg-6 m-auto text-center">Dev Tools and Resources</h4>
                 </div>
                 <div class="row text-center">
                     <div class="col-4 col-sm-4 col-md-4 col-lg-2 my-3 px-0"><i class="devicon-html5-plain-wordmark colored icon"></i></div>
@@ -117,7 +118,7 @@
                                 <p class="generalFont"> Crisam is a self taught Web Developer who is mastering his crafts with the above displayed technologies.
                                     Well, just call me Sam.
                                 </p>
-                            <a class="btn btn-primary btn-sm readMoreBtn" id="readMoreBtn">&raquo; read more...</a>
+                                <a class="btn btn-primary btn-sm readMoreBtn" id="readMoreBtn">&raquo; read more...</a>
                             </div>
                             <div  id="readMoreText">
                                 <p class="generalFont">
@@ -146,9 +147,8 @@
         <script type="text/javascript" src="public/particles.js-master/particles.js"></script>
         <script type="text/javascript" src="public/particlejs.js"></script>
         <script type="text/javascript" src="public/typed.js"></script>
-        <script type="text/javascript" src="js/slideEffect.js"></script>
+        <script type="text/javascript" src="js/slide-in.js"></script>
         <script type="text/javascript" src="js/readmore.js"></script>
-        <script type="text/javascript" src="js/plugin.js"></script>
         <script type="text/javascript">
             var typed = new Typed('#typed', {
                 strings: ["Hi how may I help you?","Just Click the Button!" ," then we talk ^2000"],
@@ -160,8 +160,6 @@
                     $('#typed').html('<button class="btn btn-lg btn-danger hireBtn"> &raquo; Hire me </button>');
                 }
             });
-
-            $('generalFont').text().substr(0,100);
         </script>
 
     </body>

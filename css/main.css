@@ -1,14 +1,18 @@
 html, body {
     width: 99%;
     height: 100%;
-    margin: 0 !important;
-    padding: 0 !important;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-    background: #ddd;
+    background: #111 !important;
     margin-top: 10px;
 }
+.typecss,
 #aboutMeHeader,
 #myName,
 .hireBtn,
@@ -20,45 +24,13 @@ body {
     font-family: 'Cinzel', serif;
 }
 
-
-/*=================LOADING STYLE=================*/
-.circular-progress-bar {
-    position: relative;
-    margin: 0 auto;
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-
-}
-
-.progress-percentage, .progress-text {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%) rotate(90deg);
-    transform: translate(-50%, -50%) rotate(90deg);
-    text-align: center;
-    padding: 0px 60px;
-
-}
-
-.progress-percentage {
-    font-size: 60px;
-    left: 60%;
-}
-
-.progress-text {
-    left: 35%;
-    color: #ddd;
-    font-size: 21px;
-}
-
-/*=================LOADING STYLE=================*/
+/*Makes the Particles into the background*/
 canvas {
     display:block;
     position: fixed;
     z-index: -1;
 }
+
 
 #particles-js {
     width: 90%;
@@ -69,29 +41,47 @@ canvas {
     left: 0;
 }
 
+.spinner {
+    width: 30%;
+    height:30%;
+    border: 10px solid #f2f;
+    border-top: 10px solid #434;
+    border-radius: 100%;
+    -webkit-animation: spin 1s infinite linear;
+    animation: spin 1s infinite linear;
+}
+
+#overlay {
+    height: 200px;
+    width: 180px;
+    margin: 0 auto;
+}
+
 .shrink {
     background: #323;
     font-weight: 700;
     -webkit-transition: 2s;
     transition:2s;
-    margin: 0;
-    padding: 0 ;
+    margin: 0 auto;
+    padding: 0  0 !important;
+    
 
 }
 
 .navbar {
     width: 100%;
-    padding: 20px 10% 1% 10%;
+    padding: 20px 20px;
     margin: 0 0;
+    text-align: center;
 }
-
 
 h1,
 .shrinkBack {
-    color: #333aaa;
     background: transparent;
     -webkit-transition: 2s;
     transition: 2s;
+    margin: 10px auto;
+    padding: 0px 30px !important;
 }
 
 #titleName {
@@ -101,12 +91,12 @@ h1,
     font-size: 2em;
 }
 #welcomeTitle {
-    font-size: 3em;
+    font-size: 2.5em;
 }
 
 #welcomeText .container {
-    margin-top: 200px;
-    margin-bottom: 300px;
+    margin-top: 220px;
+    margin-bottom: 280px;
 }
 
 #welcomeText .container h4 {
@@ -116,7 +106,6 @@ h1,
 
 
 .typecss {
-    font-family: 'comic sans';
     z-index: 99;
     text-align: center;
     font-size: 32px;
@@ -130,14 +119,7 @@ h1,
     transition: ease-in-out .5s;
 }
 
-/*
-.icon {
-font-size: 0;
-}
-*/
-
 .iconEffect {
-    font-size: 5em;
     -webkit-animation: drop   500ms ease forwards;
     animation: drop 500ms ease  forwards;
 }
@@ -178,12 +160,9 @@ font-size: 0;
     font-size: 3em !important;
 
 }
-/*
 
-.fa.show-profile-social-icon {
-font-size: 2em !important;
-}
-*/
+
+
 /*ABOUT ME======================================*/
 .generalFont {
     color: #ddd;
@@ -202,8 +181,6 @@ font-size: 2em !important;
 
 
 .aboutContent {
-    /*    height: 50vh;*/
-    /*    overflow: hidden;*/
     background: transparent;
     padding: 100px 10px 10px 10px;
 }
@@ -224,6 +201,7 @@ font-size: 2em !important;
     padding: 100px 10px 10px 10px;
 }
 /*ABOUT ME==============================================================*/
+
 .slide-in {
     background: rgba(255,255,255, 0.2);
     padding: 100px 10px 10px 10px;
@@ -274,44 +252,64 @@ font-size: 2em !important;
 
 @-webkit-keyframes drop {
     0% {
-        font-size: 1em;
+        font-size: 0em;
 
     } 
     15% {
-        font-size: 2em;
+        font-size: .5em;
     } 
     30% {
-        font-size: 2.5em;
+        font-size: 1em;
     } 
     60% {
-        font-size: 4em;
+        font-size: 1.5em;
     }
     80% {
-        font-size: 4.5em;
+        font-size: 2em;
     }
     100% {
-        font-size: 5em;
+        font-size: 2.5em;
     }
 }
 
 @keyframes drop {
     0% {
-        font-size: 1em;
+        font-size: 10px;
+
     } 
     15% {
-        font-size: 2em;
+        font-size: 18px;
     } 
     30% {
-        font-size: 2.5em;
+        font-size: 20px;
     } 
     60% {
-        font-size: 4em;
+        font-size: 26px;
     }
     80% {
-        font-size: 4.5em;
+        font-size: 28px;
     }
     100% {
-        font-size: 5em;
+        font-size: 54px;
     }
 }
 
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    } to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    } to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

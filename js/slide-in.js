@@ -1,6 +1,15 @@
+/* MOBILE AND NON-MOBILE SET-UP */
+/**/
+/**/
+/**/
+/**/
+/**/
+
+
 $(document).ready(function(){
     var icon                = $('.icon'),
         iconOffset          = icon.offset().top/2 - 100,
+        
         //About Container 
         offsetEl            = $('#aboutMeText').offset().top/2 + 100,
         elContent           = $('.aboutContent'),
