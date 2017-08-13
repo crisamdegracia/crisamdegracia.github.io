@@ -10,15 +10,18 @@ html, body {
 
 body {
     background: #111 !important;
-    margin-top: 10px;
+    position: relative;
+    overflow-y: scroll;
+    border: 1px solid;
 }
+
 #projectHeader,
 .typecss,
 #aboutMeHeader,
 #myName,
 .hireBtn,
 #resourcesTitle,
-#welcomeText .container h4 ,
+#homeMain .container h4 ,
 .navbar ,
 #titleName {
     font-family: 'Sedgwick Ave Display', cursive;
@@ -61,28 +64,28 @@ canvas {
 .shrink {
     background: #323;
     font-weight: 700;
-    -webkit-transition: 2s;
-    transition:2s;
-    margin: 0 auto;
-    padding: 0  0 !important;
-
+    -webkit-transition: 450ms;
+    transition:450ms;
+    padding: 20px 0 0  0 !important;
+    
 
 }
 
 .navbar {
     width: 100%;
     padding: 20px 20px;
-    margin: 0 0;
     text-align: center;
+   
 }
 
 h1,
 .shrinkBack {
     background: transparent;
-    -webkit-transition: 2s;
-    transition: 2s;
+    -webkit-transition: 600ms;
+    transition: 600ms;
     margin: 10px auto;
     padding: 0px 30px !important;
+   
 }
 
 #titleName {
@@ -92,15 +95,16 @@ h1,
     font-size: 2em;
 }
 #welcomeTitle {
+    
     font-size: 2.5em;
 }
 
-#welcomeText .container {
-    margin-top: 220px;
+#homeMain .container {
+    margin-top: 330px;
     margin-bottom: 280px;
 }
 
-#welcomeText .container h4 {
+#homeMain .container h4 {
     color: #ddd;
     text-align: center;   
 }
@@ -144,8 +148,9 @@ h1,
 #aboutMeHeader {
     color: #ddd;    
 }
-
-
+#projectHeader {
+    font-size: 3em;
+}
 #proPic {
     /*    background: */
     border-radius: 50%;
@@ -218,7 +223,7 @@ h1,
 }
 
 .project-img-1 {
-    background: url('../assets/images/get-in-touch-php.png') no-repeat center;
+    background: url('../assets/images/get-in-touch-php.png');
     background-size: cover;
 }
 
@@ -265,6 +270,7 @@ h1,
     border-radius: 20px;
     height: 100%;
     width: 100%;
+    padding: 50px;
     
 }
 

@@ -15,14 +15,14 @@
 
     </head>
 
-    <body>
+    <body data-spy="scroll" data-target="#navBar" data-offset="150">
         <div id="overlay" class="container mt-5 pt-5">>
             <div class="spinner m-auto"></div>
         </div>
         <script type="text/javascript" src="js/loading.js"></script>
 
         <div id="particles-js"></div>
-        <div class="container">
+        <div class="container" id="home">
             <nav class="navbar navbar-toggleable-sm fixed-top navbar-inverse shrinkBack">
                 <!--navbar-inverse bg-inverse-->
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navBar" aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,15 +32,15 @@
                 <h1 id="titleName">SamBeeTech</h1>
 
                 <div class="collapse navbar-collapse"  id="navBar">
-                    <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link bg-white" href="#">Home<span class="sr-only">(current)</span></a>
+                    <ul class="nav navbar-nav ml-auto" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link bg-white" href="#home">Home<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Projects</a>
+                            <a class="nav-link" href="#project">Projects</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contact</a>
@@ -49,7 +49,9 @@
                 </div>
             </nav>
         </div><!--main nav-->
-        <section id="welcomeText" class="mb-5">
+        
+        
+        <div id="homeMain" class="mb-5">
             <div class="container text-center">
                 <div class="col-md-6 m-auto">
                     <h4 id="welcomeTitle">WEB DEVELOPER</h4>
@@ -57,8 +59,8 @@
                     <span id="typed" class="typecss"></span>
                 </div>
             </div>
-        </section>
-        <section id="resources">
+        </div>
+        <div id="resources">
             <div class="container mainContent" id="resourcesContent">
                 <div class="text-center">
 
@@ -82,11 +84,11 @@
                     <div class="col-4 col-sm-4 col-md-4 col-lg-2 my-3 px-0"><i class="devicon-php-plain colored icon"></i></div>
                 </div>
             </div>
-        </section>
-        <section id="about">
+        </div>
+        <div id="about">
             <div class="container">
                 <div class="text-center py-5">
-                    <h4 class="display-4" id="aboutMeHeader">About me</h4>
+                    <h4 class="display-4 " id="aboutMeHeader">About me</h4>
 <!--                    http://sambeetech-com.stackstaging.com/_assets/myphoto.jpg-->
                     <img id="proPic" src="assets/images/myphoto.jpg" alt="2x2ProfilePicture">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 m-auto mainContent hiddenText aboutContent ">
@@ -163,8 +165,8 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="projects">
+        </div>
+        <div id="project">
 
             <div class="container">
                 <h4 id="projectHeader" class="text-center">Projects</h4>
@@ -174,6 +176,7 @@
 
                             <h4>Description</h4>
                             <p class="img-description-text">Let's you recieved some feedback or emails from the users using PHP as a backend.</p>
+                            <a href="http://sambeetech-com.stackstaging.com/1-hello-world/" target="_blank" class="btn btn-sm btn-success goLiveBtn">Live Demo</a>
                         </div>
                     </div>
 
@@ -181,14 +184,16 @@
                         <div class="img-description">
 
                             <h4>Description</h4>
-                            <p class="img-description-text">Let's you recieved some feedback or emails from the users using PHP as a backend.</p>
+                            <p class="img-description-text">Let's you register and access the hidden page on PHP as backend</p>
+                            <a href="http://sambeetech-com.stackstaging.com/3-twitch/" target="_blank" class="btn btn-sm btn-success goLiveBtn">Live Demo</a>
                         </div>
                     </div>
                     <div class="col-12 col-sm-12 col-md-3 col-lg-3  img-container project-img-3" >
                         <div class="img-description">
 
                             <h4>Description</h4>
-                            <p class="img-description-text">Let's you recieved some feedback or emails from the users using PHP as a backend.</p>
+                            <p class="img-description-text">Let's you store your hidden secrets in our database . PHP and MySLQ as backend server.</p>
+                            <a href="http://sambeetech-com.stackstaging.com/4-secret-diary" class="btn btn-sm btn-success goLiveBtn" target="_blank">Live Demo</a>
                         </div>
                     </div>
                     
@@ -198,12 +203,13 @@
                         <div class="img-description">
 
                             <h4>Description</h4>
-                            <p class="img-description-text">Let's you recieved some feedback or emails from the users using PHP as a backend.</p>
+                            <p class="img-description-text">Let's you search for the current weather forecast using scrapping a file from another website. backend PHP.</p>
+                            <a href="http://sambeetech-com.stackstaging.com/2-weather-scrapper" target="_blank" class="btn btn-sm btn-success goLiveBtn">Live Demo</a>
                         </div>
                     </div>
                 </div>
             </div><!--container-->
-        </section>
+        </div>
 
 
         <script type="text/javascript" src="public/jquery.min.js"></script>
@@ -226,6 +232,8 @@
                     $('#typed').html('<button class="btn btn-lg btn-danger hireBtn"> &raquo; Hire me </button>');
                 }
             });
+            
+//            $('body').scrollspy({ target: '#navBar' })
         </script>
 
     </body>
