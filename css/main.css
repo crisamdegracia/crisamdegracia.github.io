@@ -223,15 +223,15 @@ h1,
 }
 
 .project-img-2 {
-    background: url('../_assets/images/login-php.png') no-repeat center;
+    background: url('./_assets/images/login-php.png') no-repeat center;
     background-size: cover;
 }
 .project-img-3 {
-    background: url('../_assets/images/secret-diary.png') no-repeat center;
+    background: url('./_assets/images/secret-diary.png') no-repeat center;
     background-size: cover;
 }
 .project-img-4 {
-    background: url('../_assets/images/weather-scrapper.png') no-repeat center;
+    background: url('./_assets/images/weather-scrapper.png') no-repeat center;
     background-size: cover;
 }
 
