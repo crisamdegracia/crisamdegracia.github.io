@@ -218,20 +218,20 @@ h1,
 }
 
 .project-img-1 {
-    background: url('https://crisamdegracia.github.io/_assets/images/get-in-touch-php.png') no-repeat center;
+    background: url('../assets/images/get-in-touch-php.png') no-repeat center;
     background-size: cover;
 }
 
 .project-img-2 {
-    background: url('https://crisamdegracia.github.io/_assets/images/login-php.png') no-repeat center;
+    background: url('../assets/images/login-php.png') no-repeat center;
     background-size: cover;
 }
 .project-img-3 {
-    background: url('https://crisamdegracia.github.io/_assets/images/secret-diary.png') no-repeat center;
+    background: url('../assets/images/secret-diary.png') no-repeat center;
     background-size: cover;
 }
 .project-img-4 {
-    background: url('https://crisamdegracia.github.io/_assets/images/weather-scrapper.png') no-repeat center;
+    background: url('../assets/images/weather-scrapper.png') no-repeat center;
     background-size: cover;
 }
 
