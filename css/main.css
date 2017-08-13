@@ -12,7 +12,7 @@ body {
     background: #111 !important;
     position: relative;
     overflow-y: scroll;
-    border: 1px solid;
+    border: 1px solid #111;
 }
 
 #projectHeader,
