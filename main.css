@@ -1,25 +1,42 @@
 html, body {
-    /*    width: 100%;*/
+    width: 99%;
     height: 100%;
-    margin: 0 !important;
-    padding: 0 !important;
-    widows: 95%;
 }
 
-{
-    border: 1px solid red;
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box !important;
 }
 
 body {
-    background: #111;
-    margin-top: 10px;
+    background: #111 !important;
+    position: relative;
+    overflow-y: scroll;
+    border: 1px solid #111;
+    
 }
 
+#projectHeader,
+.typecss,
+#aboutMeHeader,
+#myName,
+.hireBtn,
+#resourcesTitle,
+#homeMain .container h4 ,
+.navbar ,
+#titleName {
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-family: 'Cinzel', serif;
+}
+
+/*Makes the Particles into the background*/
 canvas {
     display:block;
     position: fixed;
     z-index: -1;
 }
+
+
 #particles-js {
     width: 90%;
     height: 90%;
@@ -29,54 +46,72 @@ canvas {
     left: 0;
 }
 
+.spinner {
+    width: 30%;
+    height:30%;
+    border: 10px solid #f2f;
+    border-top: 10px solid #434;
+    border-radius: 100%;
+    -webkit-animation: spin 1s infinite linear;
+    animation: spin 1s infinite linear;
+}
+
+#overlay {
+    height: 200px;
+    width: 180px;
+    margin: 0 auto;
+}
+
 .shrink {
     background: #323;
     font-weight: 700;
-    -webkit-transition: 2s;
-    transition:2s;
-    margin: 0;
-    padding: 0 ;
+    -webkit-transition: 450ms;
+    transition:450ms;
+    padding: 20px 0 0  0 !important;
+    
 
 }
 
 .navbar {
     width: 100%;
-    padding-top: 20px;
+    padding: 20px 20px;
+    text-align: center;
+   
 }
 
 h1,
 .shrinkBack {
-    color: #333aaa;
     background: transparent;
-    -webkit-transition: 2s;
-    transition: 2s;
+    -webkit-transition: 600ms;
+    transition: 600ms;
+    margin: 10px auto;
+    padding: 0px 30px !important;
+   
 }
 
 #titleName {
     top:-10px;
-    font-family: monospace;
     color: #aaa;
     padding: 10px;
-    /*    border: 1px solid green;*/
+    font-size: 2em;
+}
+#welcomeTitle {
+    
+    font-size: 2.5em;
 }
 
-
-#welcomeText .container {
-    margin-top: 200px;
-    margin-bottom: 300px;
-    width: 90%;
+#homeMain .container {
+    margin-top: 280px;
+    margin-bottom: 280px;
 }
 
-
-
-#welcomeText .container h4 {
+#homeMain .container h4 {
     color: #ddd;
     text-align: center;   
 }
 
 
 .typecss {
-    font-family: 'comic sans';
     z-index: 99;
     text-align: center;
     font-size: 32px;
@@ -84,54 +119,301 @@ h1,
     color: #eee;
 }
 
-.hireBtn {
+.hireBtn { 
     font-weight: 700;
+    -webkit-transition: ease-in-out .5s;
     transition: ease-in-out .5s;
 }
 
-.icon {
-    margin: 0 0 !important;
-    padding: 10px 0;
-    font-size: 5em;
-    border: 1px solid #000;
-    border-radius: 20px;
+.iconEffect {
+    -webkit-animation: drop   500ms ease forwards;
+    animation: drop 500ms ease  forwards;
 }
 
+#resourcesContent {
+    background:rgba(255,255,255, 0.2);
+    padding: 0 0;
+}
+
+/*DEV TOOLS AND RESOURCES*/
 #resourcesTitle {
+    background: rgba(255,255,000, 0.2);
+    border-radius: 50px;
     color: #ddd;
-    margin: 0 ;
-    padding: 0 ;
+    font-size: 2em;
+    -webkit-box-shadow: 0 0 50px #111;
+    box-shadow: 0 0 50px #111;
+}
+
+#projectHeader,
+#aboutMeHeader {
+    color: #ddd;    
+}
+#projectHeader {
+    font-size: 3em;
 }
 #proPic {
+    /*    background: */
     border-radius: 50%;
-    -moz-box-shadow:     50px 0  5px #aaa;
-    -webkit-box-shadow:  0 0 10px #aaa;
-    box-shadow:          0 0 10px #aaa;
+    -webkit-box-shadow:  0 0 10px #111;
+    box-shadow:          0 0 40px #111;
+    margin-bottom: -100px;
+    position: relative;
+    z-index: 99;
+    opacity: 1;
+}
+#myName {
+    margin-top: 15px;
 }
 
-.fa.fa-linkedin,
-.fa.fa-twitter, 
-.fa.fa-github {
-    font-size: 2em !important;
+.fa.profile-social-icon {
+    font-size: 3em !important;
+
 }
 
+
+
+/*ABOUT ME======================================*/
 .generalFont {
-    color: #111;
+    color: #ddd;
+    font-size: 1.3em;
+    padding: ;
 }
 
-.mainContent .row { 
-    border: 1px solid red;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-.col-lg-3 {
-    border: 1px solid green;
-    padding: 0 0 !important;
-    margin:  0 0 !important;
-}
+
 .mainContent {
-    padding: 10px 0;
-    margin: 0 0 !important;
-    background: rgba(255, 255, 255, 0.6);
     border-radius: 20px;
+}
+
+#resources .mainContent {
+    padding: 10px;
+}
+
+
+.aboutContent {
+    background: transparent;
+    padding: 100px 10px 10px 10px;
+}
+.readMoreBtnHide {
+    visibility: hidden;
+}
+
+.readMoreBtn { 
+    visibility: visible;
+}
+.mobileAboutContent {
+    background: rgba(255,255,255, 0.2);
+    padding: 100px 10px 10px 10px;
+}
+
+.show-aboutContent {
+    background: #ddd;
+    padding: 100px 10px 10px 10px;
+}
+/*ABOUT ME==============================================================*/
+
+
+
+
+
+
+/*PROJECTS=======================================================*/
+
+#projects {
+    margin:200px 0 200px 0;
+}
+
+.project-img-1 {
+    background: url('../assets/images/get-in-touch-php.png');
+    background-size: cover;
+}
+
+.project-img-2 {
+    background: url('../assets/images/login-php.png') no-repeat center;
+    background-size: cover;
+}
+.project-img-3 {
+    background: url('../assets/images/secret-diary.png') no-repeat center;
+    background-size: cover;
+}
+.project-img-4 {
+    background: url('../assets/images/weather-scrapper.png') no-repeat center;
+    background-size: cover;
+}
+.project-img-5 {
+    background: url('../assets/images/yelpcamp.png') no-repeat center;
+    background-size: cover;
+}
+
+.project-img-1:hover,
+.project-img-2:hover,
+.project-img-3:hover,
+.project-img-4:hover,
+.project-img-5:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: 450ms;
+    transition: 450ms;
+}
+
+.img-container {
+    position: relative;
+    z-index: 90;
+    height: 281px;
+    border-radius: 20px;
+    margin: 10px auto;
+}
+
+.img-description {
+    color: transparent !important;
+    text-align: center;
+    background: transparent;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    z-index: 99;
+    color: #aaa;
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    padding: 5px 30px;
+    
+}
+
+.img-description:hover {
+    color: #fff !important;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    z-index: 99;
+    color: #aaa;
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+}
+.goLiveBtn {
+    
+}
+
+/*PROJECTS=======================================================*/
+
+
+
+
+
+
+
+
+.slide-in {
+    background: rgba(255,255,255, 0.2);
+    padding: 100px 10px 10px 10px;
+    -webkit-animation: slide-in 500ms ease-out forwards;
+    animation: slide-in 500ms ease-out  forwards;
+}
+
+@-webkit-keyframes slide-in  {
+
+    0% { 
+        left:50%;
+    }
+    15%{
+        left:60%;
+    }
+    100% {
+
+
+        left:0%;
+    }
+}
+
+@keyframes slide-in  {
+
+    0% { 
+        left:50%;
+    }
+    15%{
+        left:-50%;
+    }
+    30% {
+        left:25%;
+    }
+    60% {
+        left:-25%;
+    }
+    90% {
+        left:10%;
+    }
+    50% {
+        left:-10%;
+    }
+    100% {
+
+        left:0%;
+    }
+}
+
+@-webkit-keyframes drop {
+    0% {
+        font-size: 0em;
+
+    } 
+    15% {
+        font-size: .5em;
+    } 
+    30% {
+        font-size: 1em;
+    } 
+    60% {
+        font-size: 1.5em;
+    }
+    80% {
+        font-size: 2em;
+    }
+    100% {
+        font-size: 2.5em;
+    }
+}
+
+@keyframes drop {
+    0% {
+        font-size: 10px;
+
+    } 
+    15% {
+        font-size: 18px;
+    } 
+    30% {
+        font-size: 20px;
+    } 
+    60% {
+        font-size: 26px;
+    }
+    80% {
+        font-size: 28px;
+    }
+    100% {
+        font-size: 54px;
+    }
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    } to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    } to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
