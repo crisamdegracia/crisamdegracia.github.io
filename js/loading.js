@@ -6,14 +6,9 @@ $(document).ready(function(){
     $(window).on('load',function(){
         overlay.css('display','none');
         main.css(
-
-            'display','block',
-            'position','relative',
-            'overflow-y', 'scroll',
-            'margin' , '0 0',
-            'padding' , '0 0'
+            'visibility','visible'
         )
-
+        console.log('loads complete.')
     })
 })
 
