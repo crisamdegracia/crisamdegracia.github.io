@@ -6,7 +6,7 @@ $(document).ready(function(){
     $(window).on('load',function(){
         overlay.css('display','none');
         main.css(
-            'display','block'
+         'display','block'
         )
         console.log('loads complete.')
     })

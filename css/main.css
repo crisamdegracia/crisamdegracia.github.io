@@ -10,12 +10,9 @@ html {
 }
 
 body {
-    display: none;
     background: #111;
-    overflow: scroll;
-    
-    
 /*    visibility: hidden;*/
+    display: none;
 }
 
 /*html,*/
@@ -248,7 +245,7 @@ canvas {
 
 #project {
     background: rgba(255, 255, 255, 0.2);
-    margin:100px 50px;
+    margin:200px 50px;
     padding: 50px 5px 5px 5px;
     border-radius: 30px;
 }
