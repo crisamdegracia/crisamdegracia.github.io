@@ -6,22 +6,13 @@ html {
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    /*            border: 1px solid red;*/
 }
 
 body {
     background: #111;
-/*    visibility: hidden;*/
-    display: none;
+    display: block;
+    border: 1px solid #111;
 }
-
-/*html,*/
-/*#aboutMeText .readMoreBtn,*/
-/*#about,*/
-/*#project,*/
-/*#resources,*/
-/*#homeMain,*/
-/*#main */
 
 #projectHeader,
 .typecss,
@@ -30,7 +21,7 @@ body {
 .hireBtn,
 #resourcesTitle,
 #homeMain .container h4 ,
-.navbar ,
+.navbar,
 #titleName {
     font-family: 'Sedgwick Ave Display', cursive;
     font-family: 'Cinzel', serif;
@@ -38,17 +29,18 @@ body {
 
 /*Makes the Particles into the background*/
 canvas {
-    display:block;
+    display: block;
     position: fixed;
-    z-index: -1;
+    z-index: 1;
 }
 
 
 #particles-js {
+/*    display: block;*/
     width: 90%;
     height: 90%;
-    position: absolute;
-    z-index: -10;
+    position: relative;
+    z-index: 1;
     top: 0;
     left: 0;
 
@@ -64,7 +56,7 @@ canvas {
     animation: spin 1s infinite linear;
 }
 
-
+/*the spinner*/
 #overlay {
     height: 200px;
     width: 180px;
@@ -108,7 +100,11 @@ canvas {
     font-size: 2.5em;
 }
 
+/*First Container*/
+
 #homeMain .container {
+   height: 50%;
+    width: 90%;
     margin-top: 260px;
     margin-bottom: 270px;
 }
@@ -135,17 +131,30 @@ canvas {
 
 /*icons of tools and resources*/
 .iconEffect {
+    -webkit-transition: 450ms;
+    transition: 450ms;
     -webkit-animation: drop   500ms ease forwards;
     animation: drop 500ms ease  forwards;
 }
 
-#resourcesContent {
-    background:rgba(255,255,255, 0.2);
-    padding: 0 0;
 
+/**/
+#home,
+#homeMain,
+#project,
+#about,
+#resources {
+    display: none;
 }
 
-/*DEV TOOLS AND RESOURCES*/
+#resourcesContent {
+    height: 70%;
+    width: 90%;
+    background:rgba(255,255,255, 0.2);
+    padding: 0 0;
+}
+
+/*Skill Set*/
 
 #resourcesTitle {
     background: rgba(255,255,000, 0.2);
@@ -169,7 +178,7 @@ canvas {
     -webkit-box-shadow: 0 0 50px #111;
     box-shadow: 0 0 50px #111;
     margin: 50px auto;
-    
+
 }
 
 #proPic {
@@ -205,13 +214,17 @@ canvas {
 
 }
 
-#resources .mainContent {
+#resources {
+    height: 40%;
+    width: 75%;
     padding: 10px;
+    margin: 0 auto;
 
 }
 
 
 .aboutContent {
+    width: 80%;
     background: transparent;
     padding: 100px 10px 10px 10px;
 }
@@ -244,9 +257,10 @@ canvas {
 /*PROJECTS=======================================================*/
 
 #project {
+    width: 75%;
     background: rgba(255, 255, 255, 0.2);
-    margin:200px 50px;
-    padding: 50px 5px 5px 5px;
+    margin: 150px auto;
+    padding: 0px 5px 5px 5px;
     border-radius: 30px;
 }
 
@@ -290,7 +304,7 @@ canvas {
 .img-container {
     position: relative;
     z-index: 90;
-    height: 281px;
+    height: 270px;
     border-radius: 20px;
     margin: 10px auto;
 
@@ -305,16 +319,15 @@ canvas {
     left: 0%;
     z-index: 99;
     border-radius: 20px;
-    padding: 5px 20px;
+    padding: 5px 10px;
     height: 100%;
     width: 100%;
-    /*    font-size: 10px;*/
 }
 
 .img-description:hover {
-    color: #eee;
+    color: #ccc;
     text-align: center;
-    background: rgba(0,0,0,.9);
+    background: rgba(001,001,25,.9);
     position: absolute;
     bottom: 0%;
     left: 0%;
@@ -412,6 +425,7 @@ canvas {
         font-size: 10px;
 
     } 
+/*
     15% {
         font-size: 18px;
     } 
@@ -424,6 +438,7 @@ canvas {
     80% {
         font-size: 28px;
     }
+*/
     100% {
         font-size: 54px;
     }
@@ -451,21 +466,22 @@ canvas {
 
 
 /*Not sure here why the hell the actuall width of the window is plus 200px  (min-width actuall break point 615)  (max-width actuall break point 792) */ 
-@media  (max-width: 992px) and (min-width: 768px) {
-
+@media  (max-width: 1192px) and (min-width: 768px) {
+    
     #project .img-description-text  {
-        font-size: 14.5px;
-    }
-
+        font-size: 14px;
+       
+    } 
+ 
 }
 
 @media  (max-width: 992px) {
-    
+
     .shrinkBack,
     #titleName  {
         font-size: 1.1em;
     }
-     {
+    {
         font-size: 14px;
     }
 

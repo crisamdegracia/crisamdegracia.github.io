@@ -1,45 +1,28 @@
-$(document).ready(function(){
+//home,
+//#homeMain,
+//#project,
+//#about,
+//#resources
+(function(){
 
 
-    var overlay = $('#overlay'),
-        main    = $('#main');
-    $(window).on('load',function(){
-        overlay.css('display','none');
-        main.css(
-         'display','block'
-        )
-        console.log('loads complete.')
+    var overlay       = document.getElementById('overlay'),
+        homeMain      = document.getElementById('homeMain'),
+        project       = document.getElementById('project'),
+        about         = document.getElementById('about'),
+        resources     = document.getElementById('resources'),
+        home          = document.getElementById('home');
+
+    window.addEventListener('load', function(){
+        overlay.style.display = 'none'; 
+        homeMain.style.display = 'block'; 
+        home.style.display = 'block'; 
+        project.style.display = 'block'; 
+        about.style.display = 'block'; 
+        resources.style.display = 'block'; 
+
     })
-})
 
-
-//(function(){
-//
-//    //    #aboutMeText .readMoreBtn,
-//    //    #about,
-//    //    #project,
-//    //    #resources,
-//    //    #homeMain ,
-//    //    #main
-//    //the loader
-//    var overlay       = document.getElementById('overlay'),
-//        body          = document.getElementById('main'),
-//        homeMain      = document.getElementById('homeMain'),
-//        resources     = document.getElementById('resources'),
-//        about         = document.getElementById('about'),
-//        readMoreBtn   = document.getElementsByTagName('#aboutMeText .readMoreBtn')
-//
-//    window.addEventListener('load', function(){
-//        overlay.style.display = 'none'; 
-//
-//        body.style.visibility = 'visible'
-//        body.style.height = '100%'
-////        resources.style.visibility = 'visible'
-////        about.style.visibility = 'visible'
-////        readMoreBtn.style.visibility = 'visible'
-//
-//    })
-//
-//})();
+})();
 
 

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <title>Crisam De Gracia - Portfolio</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -10,7 +11,7 @@
         <meta property="og:title" content="Crisam De Gracia | Web Developer" />
         <meta property="og:url" content="https://crisamdegracia.github.io">
         <meta property="og:site_name" content="Crisamdegracia.github.io"/> 
-        <meta property="og:image" content="assets/images/songokou.jpg" />
+        <meta property="og:image" content="/assets/images/songokou.jpg" />
         <meta property="og:description" content="Web site? Wordpress? SEO? I am available all days of the week! "/> 
         <meta property="og:type" content="porfolio"/>
 
@@ -21,7 +22,7 @@
 
 
         <meta property="twitter:site" content="@crisamdegracia"/> 
-        <meta property="twitter:image" content="assets/images/songokou.jpg"/> 
+        <meta property="twitter:image" content="/assets/images/songokou.jpg"/> 
         <meta property="twitter:creator" content="@crisamdegracia"/>
         <meta property="twitter:title" content="Crisam De Gracia | Web Developer"/>
         <meta property="twitter:description" content="Web site? Wordpress? SEO? I am available all days of the week! "/> 
@@ -32,22 +33,24 @@
         <meta name="keywords" content="Portfolio, Web Developer, Amazing Portfolio, HTML5, PHP, CSS3, Css, Javascript, Mobile Responsive, "/> 
 
         <meta property="site_name" content="Crisamdegracia.github.io"/> 
-        <meta property="image" content="assets/images/songokou.jpg"/> 
+        <meta property="image" content="/assets/images/songokou.jpg"/> 
 
 
         <meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />
         <meta http-equiv="PRAGMA" content="NO-CACHE" /> 
-        <meta http-equiv="EXPIRES" content="-1" /> <!-- DNS Prefetching -->      
+        <meta http-equiv="EXPIRES" content="-1" />   
 
 
-        <link rel="stylesheet" href="public/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="/public/bootstrap/css/bootstrap.css">
         <link rel="stylesheet" href="/css/main.css">
         <link  href="/public/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Cinzel|Sedgwick+Ave+Display" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
-        <title>Crisam De Gracia - Portfolio</title>
+
+
+
 
     </head>
 
@@ -55,7 +58,6 @@
         <div id="overlay" class="container mt-5 pt-5">>
             <div class="spinner m-auto"></div>
         </div>
-
 
         <div id="particles-js"></div>
         <div class="container" id="home">
@@ -267,17 +269,18 @@
             </div><!--container-->
         </div><!--project-->
 
+        <script type="text/javascript" src="/public/jquery.min.js"></script>
+        <script type="text/javascript" src="/js/loading.js"></script>
 
-        <script type="text/javascript" src="public/jquery.min.js"></script>
-        <script type="text/javascript" src="js/loading.js"></script>
+        <script type="text/javascript" src="/public/particles.js-master/particles.js"></script>
+        <script type="text/javascript" src="/public/particlejs.js"></script>
+
         <script type="text/javascript" src="https://cdn.jsdelivr.net/tether/1.4.0/tether.min.js"></script>
-        <script type="text/javascript" src="public/bootstrap/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/shrink.js"></script>
-        <script type="text/javascript" src="public/particles.js-master/particles.js"></script>
-        <script type="text/javascript" src="public/particlejs.js"></script>
-        <script type="text/javascript" src="public/typed.js"></script>
-        <script type="text/javascript" src="js/slide-in.js"></script>
-        <script type="text/javascript" src="js/readmore.js"></script>
+        <script type="text/javascript" src="/public/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/js/shrink.js"></script>
+        <script type="text/javascript" src="/public/typed.js"></script>
+        <script type="text/javascript" src="/js/slide-in.js"></script>
+        <script type="text/javascript" src="/js/readmore.js"></script>
 
         <script type="text/javascript">
             var typed = new Typed('#typed', {
@@ -292,7 +295,35 @@
             });
 
             //            $('body').scrollspy({ target: '#navBar' })
+
         </script>
+
+        <script>
+
+            $(document).ready(function(){
+                console.log('loads complete.');
+
+                var overlay = $('#overlay'),
+                    firstContainer      = $('#homeMain .container'),
+                    secondContainer     =  $('#resources'),
+                    thirdContainer     =  $('.aboutContent')
+
+//
+//                $(window).on('load',function(){
+//
+//                    overlay.css('display','none');
+//                    //        firstContainer.css('display' , 'block');
+//                    //        secondContainer.css('display' , 'block');
+//                    //        main.css('display' , 'block');
+//
+//
+//                })
+            })
+
+        </script>
+
+
+
 
     </body>
 </html>

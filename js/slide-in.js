@@ -52,7 +52,7 @@ $(document).ready(function(){
         /*hide icon like Heroku Javascript etc*/
         /*Hide About me Text*/
         /*Hide Social  Profile icons Like Github,Twitter, Linkedin*/
-        $('#resourcesContent').hide();
+        $('#resourcesContent i').hide();
 
         icon.hide();
 
@@ -67,7 +67,7 @@ $(document).ready(function(){
 
                 icon.show();
 
-                $('#resourcesContent').show();
+                $('#resourcesContent i').show();
 
                 $('.fa.profile-social-icon').show();
 
