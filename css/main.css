@@ -148,8 +148,7 @@ canvas {
 }
 
 #resourcesContent {
-    height: 70%;
-    width: 90%;
+ 
     background:rgba(255,255,255, 0.2);
     padding: 0 0;
 }
@@ -338,7 +337,7 @@ canvas {
     font-size: 1.1em;
 }
 .goLiveBtn {
-
+ 
 }
 
 /*PROJECTS=======================================================*/
