@@ -30,7 +30,7 @@ body {
 canvas {
     display: block;
     position: fixed;
-/*    z-index: -99;*/
+    /*    z-index: -99;*/
 }
 
 
@@ -38,7 +38,7 @@ canvas {
     width: 90%;
     height: 90%;
     position: relative;
-/*    z-index: -1;*/
+    /*    z-index: -1;*/
     top: 0;
     left: 0;
     visibility: hidden;
@@ -85,6 +85,38 @@ canvas {
     margin: 10px auto;
     padding: 0px 30px !important;
     font-size: 1.3em;
+}
+#floatingBtn div {
+/*    background: yellow;*/
+/*
+    margin: 0 auto;
+    padding: 0 auto;
+*/
+    border-radius: 50%;
+/*    margin-top: 7px;*/
+    color: yellow;
+
+        
+}
+#floatingBtn {
+
+    margin: 0 auto;
+    display: none;
+    width: 56px;
+    height: 56px;
+    position: fixed;
+    top: 90%;
+    left: 93%;
+    border-radius: 50%;
+    background: #333;
+    -webkit-transition: 450ms;
+    transition: 450ms;
+    -webkit-animation: floating   500ms ease;
+    animation: floating 500ms ease;
+}
+
+#floatingBtn:hover {
+    cursor: pointer;
 }
 
 #titleName {
@@ -231,13 +263,13 @@ canvas {
 
 /*
 .readMoreBtnHide {
-    visibility: hidden;
+visibility: hidden;
 }
 */
 
 /*
 .readMoreBtn { 
-    visibility: visible;
+visibility: visible;
 }
 */
 
@@ -491,8 +523,37 @@ canvas {
 }
 
 
+@-webkit-keyframes floating {
+
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    } to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+
+@keyframes floating {
+
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    } to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
 /*Not sure here why the hell the actuall width of the window is plus 200px  (min-width actuall break point 615)  (max-width actuall break point 792) */ 
 @media  (max-width: 1192px) and (min-width: 768px) {
+
+/*
+    * {
+        border: 1px solid red;
+    }
+*/
 
     #project .img-description-text  {
         font-size: 14px;
@@ -503,6 +564,10 @@ canvas {
 
 @media  (max-width: 992px) {
 
+    #floatingBtn {
+        left: 90%;
+
+    }
     .shrinkBack,
     #titleName  {
         font-size: 1.1em;
@@ -513,3 +578,18 @@ canvas {
 
 }
 
+@media  (max-width: 702px) {
+    #floatingBtn h2,
+    #floatingBtn {
+        width:  30px;
+        height: 30px;
+        font-size: .8em;
+        color: yellow;
+
+
+
+    }
+}
+#footer {
+/*    border: 1px solid red;*/
+}
