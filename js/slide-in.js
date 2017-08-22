@@ -6,10 +6,10 @@
 /**/
 
 
-$(document).ready(function(){
+$(document).ready(function(e){
     var icon                = $('.icon'),
         iconOffset          = icon.offset().top/2 - 100,
-        
+
         //About Container 
         offsetEl            = $('#aboutMeText').offset().top/2 + 100,
         elContent           = $('.aboutContent'),
@@ -18,7 +18,7 @@ $(document).ready(function(){
 
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         iconOffset          = icon.offset().top/2;
-        
+
         $('#resourcesContent').hide();
 
         icon.hide();
@@ -40,10 +40,13 @@ $(document).ready(function(){
                 $('#aboutMeText').show();
 
                 icon.addClass('iconEffect');
+
+                e.stopPropagation();
+                e.preventDefault();
             }       
-            
+
         })
-//        console.log('im in mobile bitch!');
+        //        console.log('im in mobile bitch!');
         elContent.removeClass('aboutContent');
         elContent.addClass('mobileAboutContent');
 
@@ -75,18 +78,21 @@ $(document).ready(function(){
                 $('#aboutMeText').show();
 
                 icon.addClass('iconEffect');
+                e.stopPropagation();
+                e.preventDefault();
 
             }       
 
-            /*if scrolling go further in About then add Animation*/
+            /*if scrolling go further down in About then add Animation*/
             if($(document).scrollTop() > offsetEl){
 
                 elContent.addClass('slide-in');
+                e.stopPropagation();
+                e.preventDefault();
             }
 
         })
 
     }
-
 
 });

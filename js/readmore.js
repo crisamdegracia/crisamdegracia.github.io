@@ -1,9 +1,9 @@
 $(document).ready(function(e){
     var readMoreText     = $('#readMoreText');
+    readMoreText.hide();
 
+    $("#readMoreBtn").click(function(e){
 
-        readMoreText.hide();
-    $('#readMoreBtn').click(function(e){
         $(readMoreText).show();
         $(this).siblings(readMoreText).show();
         $(this).hide();
@@ -22,3 +22,7 @@ $(document).ready(function(e){
 
     })
 })
+
+
+
+

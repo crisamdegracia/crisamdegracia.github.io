@@ -1,6 +1,6 @@
 //NAVBAR FADING EFFECTS
 
-$(window).scroll(function(){
+$(window).scroll(function(e){
 
     if($(document).scrollTop() > 15 ){ 
         $('nav').removeClass('shrinkBack');
@@ -12,4 +12,7 @@ $(window).scroll(function(){
         $('nav').removeClass('shrink');
 
     }
+    
+    e.preventDefault();
+    e.stopPropagation();
 })
