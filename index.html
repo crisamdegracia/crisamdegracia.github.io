@@ -117,14 +117,14 @@
                 </div>    
             </div>
         </div>
-        
+
         <div class="clearfix"></div>
-   
-              
+
+
         <div id="about" class="my-5">
             <div class="container">
                 <div class="text-center py-5">
-               
+
                     <h4 id="aboutMeHeader" class="display-4" >About me</h4>
                     <img id="proPic" src="assets/images/myphoto.jpg" alt="2x2ProfilePicture">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 m-auto mainContent hiddenText aboutContent ">
@@ -150,7 +150,7 @@
                             </div>
                         </div>
                         <hr>
-                       
+
                         <div class="slideEffect"> 
 
                             <div id="aboutMeText">
@@ -269,7 +269,7 @@
 
 
         <!--What I Can Do-->
-<!--
+
         <section id="offer">
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 m-auto" >
                 <h4 id="offerHeader" class="text-center">My Services</h4>
@@ -280,7 +280,7 @@
                     <div class="col-12 col-sm-12 col-md-4 col-lg-4 text-center">
                         <img src="" alt="">
                         <hr>
-                        <h5> UI & UX DESIGN</h5>
+                        <h4> UI & UX DESIGN</h4>
                         <ul>
                             <li> Latest user interface designs. </li>
                             <li> Awesome User Xperience. </li>
@@ -290,7 +290,7 @@
                     <div class="col-12 col-sm-12 col-md-4 col-lg-4 text-center">
                         <img src="" alt="">
                         <hr>
-                        <h5> Wordpress </h5>
+                        <h4> Wordpress </h4>
                         <p>
                             Content Management System that supports the creation and modification of digital content. It is often used to support multiple users working in a collaborative environment.
                             Web content includes text and embedded graphics, photos, video, audio, maps, and program code (e.g., for applications) that displays content or interacts with the user.
@@ -299,7 +299,7 @@
                     <div class="col-12 col-sm-12 col-md-4 col-lg-4 text-center">
                         <img src="" alt="">
                         <hr>
-                        <h5>Back-end</h5>
+                        <h4>Back-end</h4>
                         <ul>
                             <li>
                                 Sets up your hosting domain from the ground up.
@@ -317,19 +317,65 @@
             </div>
 
         </section>
-        
--->
-        
-        <div id="floatingBtn">
+
+
+
+        <div id="floatingBtn" data-toggle="modal" data-target="#myModal">
             <div>
                 <img src="/assets/images/hireme.jpg" style="width: 50px; height: 50px; border-radius: 50%" alt="">
             </div>
         </div>
-        
-        
+
+
+
+
+        <!--MODAL----------------------------------------------------------->
+
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="form-control-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="form-control-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+        <!--MODAL----------------------------------------------------------->
+
+
+
+
+
+
+
+
         <footer id="footer">
             <div class="container">
-                <h3>From Scratch With <i class="fa fa-heart"></i> By: Sam</h3>   
+                <h3> Made From Scratch With <i class="fa fa-heart"></i> </h3>
+                <h3> By: Sam  &copy; 2017 All Rights Reserve</h3>
             </div>
         </footer>
 
@@ -344,7 +390,7 @@
         <script type="text/javascript" src="/js/slide-in.js"></script>
         <script type="text/javascript" src="/js/readmore.js"></script>
         <script type="text/javascript" src="/js/floatingBtn.js"></script>
-        
+
 
         <script type="text/javascript">
             var typed = new Typed('#typed', {
@@ -354,7 +400,7 @@
                 backSpeed: 50,
                 //                fadeOut: true,
                 onComplete: () => {
-                    $('#typed').html('<button class="btn btn-lg btn-danger hireBtn"> &raquo; Hire me </button>');
+                    $('#typed').html('<button class="btn btn-lg btn-danger hireBtn" data-toggle="modal" data-target="#myModal"> &raquo; Hire me </button>');
                 }
             });
 

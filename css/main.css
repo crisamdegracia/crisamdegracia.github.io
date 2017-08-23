@@ -88,19 +88,12 @@ canvas {
 }
 #floatingBtn div {
     background: yellow;
-/*
-    margin: 0 auto;
-    padding: 0 auto;
-*/
     border-radius: 50%;
     margin-top: 7px;
     color: yellow;
-
-        
 }
 
 #floatingBtn {
-
     margin: 0 auto;
     display: none;
     width: 56px;
@@ -182,7 +175,7 @@ canvas {
 #resourcesContent {
 
     background:rgba(255,255,255, 0.2);
-    padding: 0 0;
+    padding: 0 30px;
 }
 
 /*Skill Set*/
@@ -248,8 +241,6 @@ canvas {
 }
 
 #resources {
-    height: 40%;
-    width: 75%;
     padding: 10px;
     margin: 0 auto;
 
@@ -262,17 +253,6 @@ canvas {
     padding: 100px 10px 10px 10px;
 }
 
-/*
-.readMoreBtnHide {
-visibility: hidden;
-}
-*/
-
-/*
-.readMoreBtn { 
-visibility: visible;
-}
-*/
 
 .mobileAboutContent {
     background: rgba(255,255,255, 0.2);
@@ -382,13 +362,19 @@ visibility: visible;
 
 /*OFFER=========================================================*/
 
+#offer ul {
+    list-style: none;
+}
 #offer {
+      width: 75%;
+    font-size: 1.2em;
+    color: #ddd;
     background: rgba(255,255,255, 0.2);
     border-radius: 20px;
-    width: 80%;
-    height: 500px;
-    border: 1px solid red;
-    margin: 0 auto;
+/*    width: 80%;*/
+/*    height: 500px;*/
+/*    border: 1px solid red;*/
+    margin: 100px auto;
 }
 #offerHeader {
     background: rgba(255,255,000, 0.2);
@@ -550,11 +536,11 @@ visibility: visible;
 /*Not sure here why the hell the actuall width of the window is plus 200px  (min-width actuall break point 615)  (max-width actuall break point 792) */ 
 @media  (max-width: 1192px) and (min-width: 768px) {
 
-/*
+    /*
     * {
-        border: 1px solid red;
-    }
-*/
+    border: 1px solid red;
+}
+    */
 
     #project .img-description-text  {
         font-size: 14px;
@@ -591,6 +577,11 @@ visibility: visible;
 
     }
 }
+
 #footer {
-    border: 1px solid red;
+    margin: 0 auto;
+    width: 75%;
+    padding: 30px;
+    background: rgba(255,255,255, 0.2);
+
 }
