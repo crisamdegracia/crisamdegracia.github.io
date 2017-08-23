@@ -1,21 +1,27 @@
 //NAVBAR FADING EFFECTS
 
+$(function(){
+    
 $(window).scroll(function(e){
 
+//    var footer  = $('footer'),
+//    offset  = footer.offset().top/2 + 100;
+ 
     if($(document).scrollTop() > 15 ){ 
         $('nav').removeClass('shrinkBack');
         $('nav').addClass('shrink');
-        $('#floatingBtn').css('display','block');    
 
     } 
 
     else {
         $('nav').addClass('shrinkBack');
         $('nav').removeClass('shrink');
-        $('#floatingBtn').css('display','none'); 
 
     }
 
     e.preventDefault();
     e.stopPropagation();
+})
+//        $('#floatingBtn').css('display','block');    
+//        $('#floatingBtn').css('display','none'); 
 })

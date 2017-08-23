@@ -41,8 +41,8 @@ $(document).ready(function(e){
 
                 icon.addClass('iconEffect');
 
-                e.stopPropagation();
-                e.preventDefault();
+//                e.stopPropagation();
+//                e.preventDefault();
             }       
 
         })
@@ -78,8 +78,8 @@ $(document).ready(function(e){
                 $('#aboutMeText').show();
 
                 icon.addClass('iconEffect');
-                e.stopPropagation();
-                e.preventDefault();
+//                e.stopPropagation();
+//                e.preventDefault();
 
             }       
 
@@ -87,8 +87,8 @@ $(document).ready(function(e){
             if($(document).scrollTop() > offsetEl){
 
                 elContent.addClass('slide-in');
-                e.stopPropagation();
-                e.preventDefault();
+//                e.stopPropagation();
+//                e.preventDefault();
             }
 
         })

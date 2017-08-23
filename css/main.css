@@ -87,17 +87,18 @@ canvas {
     font-size: 1.3em;
 }
 #floatingBtn div {
-/*    background: yellow;*/
+    background: yellow;
 /*
     margin: 0 auto;
     padding: 0 auto;
 */
     border-radius: 50%;
-/*    margin-top: 7px;*/
+    margin-top: 7px;
     color: yellow;
 
         
 }
+
 #floatingBtn {
 
     margin: 0 auto;
@@ -591,5 +592,5 @@ visibility: visible;
     }
 }
 #footer {
-/*    border: 1px solid red;*/
+    border: 1px solid red;
 }
