@@ -168,7 +168,8 @@ canvas {
 #homeMain,
 #project,
 #about,
-#resources {
+#resources,
+#offer {
     display: none;
 }
 

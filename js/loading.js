@@ -12,6 +12,7 @@
         about         = document.getElementById('about'),
         resources     = document.getElementById('resources'),
         home          = document.getElementById('home'),
+        services          = document.getElementById('offer'),
         particlesJS   = document.getElementById('particles-js');
 
     window.addEventListener('load', function(e){
@@ -21,6 +22,7 @@
         project.style.display = 'block'; 
         about.style.display = 'block'; 
         resources.style.display = 'block'; 
+        services.style.display = 'block'; 
         particlesJS.style.visibility = 'visible'; 
         e.stopPropagation();
         e.preventDefault();
