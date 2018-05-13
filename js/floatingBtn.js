@@ -19,7 +19,7 @@ $(function () {
 
 
 //        console.log('---------------------')
-        console.log(' Scroll Top :  ' + $(document).scrollTop())
+//        console.log(' Scroll Top :  ' + $(document).scrollTop())
 //        console.log(' Document Height : ' + $(document).height())
 //        console.log(' Button Position : ' + position)
 //        console.log(' Footer Position  :  ' +footerPosition)
