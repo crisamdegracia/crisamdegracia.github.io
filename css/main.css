@@ -9,6 +9,8 @@ html {
 }
 
 body {
+    height: 100%;
+    width: 100%;
     background: #111;
     border: 1px solid #111;
 }
@@ -68,12 +70,21 @@ canvas {
     font-weight: 700;
     -webkit-transition: 450ms;
     transition:450ms;
-    padding: 20px 0 0  0 !important;
 }
 
+.nav-top-img { 
+    height: 13vh;
+    width: 13vh;
+    border-radius: 50px;
+    box-shadow: 2px 2px 0 yellow;
+}
+
+.shrink img {
+    height: 10vh;
+    width: 10vh;
+}
 .navbar {
     width: 100%;
-    padding: 20px 20px;
     text-align: center;
 }
 
@@ -276,55 +287,30 @@ canvas {
 
 #project {
     width: 75%;
-    background: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
     margin: 150px auto;
     padding: 0px 5px 5px 5px;
     border-radius: 30px;
 }
 
-.project-img-1 {
-    background: url('../assets/images/get-in-touch-php.png');
-    background-size: cover;
+#project .container {
+  
 }
 
-.project-img-2 {
-    background: url('../assets/images/login-php.png') no-repeat center;
-    background-size: cover;
-}
-.project-img-3 {
-    background: url('../assets/images/secret-diary.png') no-repeat center;
-    background-size: cover;
-}
-.project-img-4 {
-    background: url('../assets/images/weather-scrapper.png') no-repeat center;
-    background-size: cover;
-}
-.project-img-5 {
-    background: url('../assets/images/yelpcamp.png') no-repeat center;
-    background-size: cover;
-}.project-img-6 {
-    background: url('../assets/images/calculator.png') no-repeat center;
-    background-size: cover;
-}
-
-.project-img-1:hover,
-.project-img-2:hover,
-.project-img-3:hover,
-.project-img-4:hover,
-.project-img-5:hover,
-.project-img-6:hover{
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    -webkit-transition: 450ms;
-    transition: 450ms;
-}
 
 .img-container {
     position: relative;
+    top: 0;
+    left: 0;
     z-index: 90;
-    height: 270px;
+    height: 40vh;
+    width: auto;
     border-radius: 20px;
     margin: 10px auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment:inherit;
 
 }
 
@@ -355,6 +341,43 @@ canvas {
     width: 100%;
     font-size: 1.1em;
 }
+
+.project-img-1 {
+    background-image: url('../assets/images/get-in-touch-php.png');
+
+}
+
+.project-img-2 {
+    background-image: url('../assets/images/login-php.png');
+
+}
+.project-img-3 {
+    background-image: url('../assets/images/secret-diary.png');
+
+}
+.project-img-4 {
+    background-image: url('../assets/images/weather-scrapper.png');
+
+}
+.project-img-5 {
+    background-image: url('../assets/images/yelpcamp.png');
+
+}.project-img-6 {
+    background-image: url('../assets/images/real-prj1.png') ;
+
+}
+.project-img-1:hover,
+.project-img-2:hover,
+.project-img-3:hover,
+.project-img-4:hover,
+.project-img-5:hover,
+.project-img-6:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: 450ms;
+    transition: 450ms;
+}
+
 .goLiveBtn {
 
 }
@@ -367,14 +390,14 @@ canvas {
     list-style: none;
 }
 #offer {
-      width: 75%;
+    width: 75%;
     font-size: 1.2em;
     color: #ddd;
     background: rgba(255,255,255, 0.2);
     border-radius: 20px;
-/*    width: 80%;*/
-/*    height: 500px;*/
-/*    border: 1px solid red;*/
+    /*    width: 80%;*/
+    /*    height: 500px;*/
+    /*    border: 1px solid red;*/
     margin: 100px auto;
 }
 #offerHeader {
