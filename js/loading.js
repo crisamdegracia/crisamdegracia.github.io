@@ -13,9 +13,12 @@
         resources     = document.getElementById('resources'),
         home          = document.getElementById('home'),
         services          = document.getElementById('offer'),
-        particlesJS   = document.getElementById('particles-js');
+        particlesJS   = document.getElementById('particles-js'),
+        ftr   = document.getElementById('ftr');
+
 
     window.addEventListener('load', function(e){
+         
         overlay.style.display = 'none'; 
         homeMain.style.display = 'block'; 
         home.style.display = 'block'; 
@@ -23,6 +26,7 @@
         about.style.display = 'block'; 
         resources.style.display = 'block'; 
         services.style.display = 'block'; 
+        ftr.style.display = 'block';
         particlesJS.style.visibility = 'visible'; 
         e.stopPropagation();
         e.preventDefault();
