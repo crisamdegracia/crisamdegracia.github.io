@@ -39,7 +39,7 @@
         <link href="https://fonts.googleapis.com/css?family=Cinzel|Sedgwick+Ave+Display" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-
+        
     </head>
 
     <body id="main" data-spy="scroll" data-target="#navBar" data-offset="150">
@@ -111,8 +111,8 @@
                     <div class="col-4 col-sm-4 col-md-4 col-lg-2 my-3 px-0"><i class="devicon-nodejs-plain colored icon"></i></div>
                     <div class="col-4 col-sm-4 col-md-4 col-lg-2 my-3 px-0"><i class="devicon-php-plain colored icon"></i></div>
 
-                    <div class="col-4 col-sm-4 col-md-4 col-lg-2 my-3 px-0"><img src="assets/images/ai.png" class="img-fluid w-25"></div>
-                    <div class="col-4 col-sm-4 col-md-4 col-lg-2 my-3 px-0"><img  src="assets/images/ps.png" class="img-fluid w-25"></div>
+                    <div class="col-4 col-sm-4 col-md-4 col-lg-2 my-3 px-0"><img class="js-lazy-image" data-src="assets/images/ai.png" src="assets/images/ai.png" class="img-fluid w-25"></div>
+                    <div class="col-4 col-sm-4 col-md-4 col-lg-2 my-3 px-0"><img  lass="js-lazy-image" data-src="assets/images/ps.png" src="assets/images/ps.png" class="img-fluid w-25"></div>
                 </div>    
             </div>
         </div>
@@ -125,7 +125,7 @@
                 <div class="text-center py-5">
 
                     <h4 id="aboutMeHeader" class="display-4" >About me</h4>
-                    <img id="proPic" src="assets/images/myphoto.jpg" alt="2x2ProfilePicture">
+                    <img id="proPic" class="js-lazy-image" data-src="assets/images/myphoto.jpg" src="assets/images/myphoto.jpg" alt="2x2ProfilePicture">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 m-auto mainContent hiddenText aboutContent ">
                         <h4 class="generalFont" id="myName">Crisam De Gracia</h4>
                         <div class="container">
@@ -218,7 +218,7 @@ His main goal is to grow everyday. Learn . Build  . Achieve . and Make things Ha
                 <div class="row text-center">
 
                     <div class="proj-img-container col-12 col-sm-6 col-md-4">
-                        <img class="img-fluid" src="/assets/images/desktop-sushiboutique.png" alt="">
+                        <img class="js-lazy-image  img-fluid" data-src="/assets/images/desktop-sushiboutique.png" src="/assets/images/desktop-sushiboutique.png" alt="">
 
                         <div class="img-description">
                             <h4>Description</h4>
@@ -229,7 +229,7 @@ His main goal is to grow everyday. Learn . Build  . Achieve . and Make things Ha
                     </div> 
 
                     <div class="proj-img-container col-12 col-sm-6 col-md-4">
-                        <img class="img-fluid" src="/assets/images/real-prj1.png" alt="">
+                        <img class="js-lazy-image  img-fluid" src="/assets/images/real-prj1.png" alt="" data-src="/assets/images/real-prj1.png">
 
                         <div class="img-description">
                             <h4>Description</h4>
@@ -239,7 +239,7 @@ His main goal is to grow everyday. Learn . Build  . Achieve . and Make things Ha
 
                     </div>
                     <div class="proj-img-container col-sm-6 col-md-4">
-                        <img class="img-fluid" src="/assets/images/yelpcamp.png" alt="">
+                        <img class="js-lazy-image  img-fluid" src="/assets/images/yelpcamp.png" alt="" data-src="/assets/images/yelpcamp.png">
                         <div class="img-description">
                             <h4>Description</h4>
                             <p class="img-description-text">A RESTful Node.js app that lets you create a blog like post and allows to create account and leave reviews. it's hosted through Heroku and Mlab as free database</p>
@@ -247,7 +247,7 @@ His main goal is to grow everyday. Learn . Build  . Achieve . and Make things Ha
                         </div>
                     </div>
                     <div class="proj-img-container col-sm-6 col-md-4">
-                        <img class="img-fluid" src="/assets/images/weather-scrapper.png" alt="">
+                        <img class="js-lazy-image  img-fluid" src="/assets/images/weather-scrapper.png" alt="laptop" data-src="/assets/images/weather-scrapper.png">
                         <div class="img-description">
                             <h4>Description</h4>
                             <p class="img-description-text">An API that let's you search for the weather from different cities</p>
@@ -255,7 +255,7 @@ His main goal is to grow everyday. Learn . Build  . Achieve . and Make things Ha
                         </div>
                     </div>
                     <div class="proj-img-container col-sm-6 col-md-4">
-                        <img class="img-fluid" src="/assets/images/secret-diary.png" alt="">
+                        <img class="js-lazy-image  img-fluid" src="/assets/images/secret-diary.png" alt="" data-src="/assets/images/secret-diary.png">
                         <div class="img-description">
                             <h4>Description</h4>
                             <p class="img-description-text">Let's you store your secret to our DataBase.</p>
@@ -379,7 +379,7 @@ His main goal is to grow everyday. Learn . Build  . Achieve . and Make things Ha
             </div>
         </section>
 
-        <div class="clearfix"></div>
+        <script src="js/lazyload.js"></script>
         <script type="text/javascript" src="/public/jquery.min.js"></script>
         <script type="text/javascript" src="/js/loading.js"></script>
         <script type="text/javascript" src="/public/particles.js-master/particles.js"></script>
