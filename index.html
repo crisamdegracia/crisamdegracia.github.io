@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122874654-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-122874654-1');
+        </script>
         <title>Crisam De Gracia - Portfolio</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,10 +48,14 @@
         <link href="https://fonts.googleapis.com/css?family=Cinzel|Sedgwick+Ave+Display" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-        
+
     </head>
 
     <body id="main" data-spy="scroll" data-target="#navBar" data-offset="150">
+        <div class="contact-head">
+            <p class="text-warning float-right pr-4"><i class="fa fa-google"></i>crisamdegracia@gmail.com <i class="fa fa-phone"></i>+699-57-054-2393 <i class="fa fa-map"></i>Saudi Arabia</p>
+        </div>
+
         <div id="overlay" class="container mt-5 pt-5">
             <div class="spinner m-auto"></div>
         </div>
@@ -57,7 +70,7 @@
                 <img src="/assets/images/flogo.png" class="nav-top-img d-inline-block align-top" alt="my_logo">
                 <!--                <h5 id="titleName">Crisam De Gracia</h5>-->
 
-                <div class="collapse navbar-collapse"  id="navBar">
+                <div class="collapse navbar-collapse "  id="navBar">
                     <ul class="nav navbar-nav ml-auto" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link bg-white" href="#home">Home<span class="sr-only">(current)</span></a>
@@ -91,7 +104,7 @@
             <div class="container mainContent" id="resourcesContent">
 
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 m-auto" >
-                    <h4 id="resourcesTitle" class="text-center">Skill Set </h4>
+                    <h4 id="resourcesTitle" class="text-center">Skill Set and Tools </h4>
                 </div>
 
                 <div class="row text-center">
@@ -111,8 +124,9 @@
                     <div class="col-4 col-sm-4 col-md-4 col-lg-2 my-3 px-0"><i class="devicon-nodejs-plain colored icon"></i></div>
                     <div class="col-4 col-sm-4 col-md-4 col-lg-2 my-3 px-0"><i class="devicon-php-plain colored icon"></i></div>
 
-                    <div class="col-4 col-sm-4 col-md-4 col-lg-2 my-3 px-0"><img class="js-lazy-image" data-src="assets/images/ai.png" src="assets/images/ai.png" class="img-fluid w-25"></div>
-                    <div class="col-4 col-sm-4 col-md-4 col-lg-2 my-3 px-0"><img  lass="js-lazy-image" data-src="assets/images/ps.png" src="assets/images/ps.png" class="img-fluid w-25"></div>
+                    <div class="col-4 col-sm-4 col-md-4 col-lg-2 my-3 px-0"><img class="js-lazy-image img-fluid w-25" data-src="./assets/images/ai.png" src="./assets/images/ai.png"></div>
+
+                    <div class="col-4 col-sm-4 col-md-4 col-lg-2 my-3 px-0"><img  class="js-lazy-image img-fluid w-25" data-src="./assets/images/ps.png" src="./assets/images/ps.png"></div>
                 </div>    
             </div>
         </div>
@@ -324,7 +338,6 @@ His main goal is to grow everyday. Learn . Build  . Achieve . and Make things Ha
         </section>
 
 
-
         <!--
 <div id="floatingBtn" data-toggle="modal" data-target="#myModal">
 <div>
@@ -358,13 +371,7 @@ His main goal is to grow everyday. Learn . Build  . Achieve . and Make things Ha
                                 <i class="fa fa-linkedin profile-social-icon" id="linkedin-icon"></i>
                             </a>
                         </div>
-                        <div class="m-auto col-4 col-sm-4 col-md-4 col-lg-4 ">
 
-
-                            <i class="fa fa-phone profile-social-icon" id="linkedin-icon"></i>
-                           
-                        </div>
-                         <p>+699-57-054-2393</p>
                     </div>
 
                     <div class="col-sm-6 ">
@@ -373,11 +380,14 @@ His main goal is to grow everyday. Learn . Build  . Achieve . and Make things Ha
                     </div>
                 </div>
 
-                <h3> Sam&copy; 2017 All rights reserved.</h3>
-
 
             </div>
         </section>
+
+        <div id="copyright">
+
+            <h3 class="lead"> Sam&copy; 2017 All rights reserved.</h3>
+        </div>
 
         <script src="js/lazyload.js"></script>
         <script type="text/javascript" src="/public/jquery.min.js"></script>

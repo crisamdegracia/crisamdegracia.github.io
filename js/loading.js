@@ -12,13 +12,14 @@
         about         = document.getElementById('about'),
         resources     = document.getElementById('resources'),
         home          = document.getElementById('home'),
-        services          = document.getElementById('offer'),
+        services      = document.getElementById('offer'),
         particlesJS   = document.getElementById('particles-js'),
-        ftr   = document.getElementById('ftr');
+        ftr           = document.getElementById('ftr'),
+        copyright     = document.getElementById('copyright');
 
 
     window.addEventListener('load', function(e){
-         
+
         overlay.style.display = 'none'; 
         homeMain.style.display = 'block'; 
         home.style.display = 'block'; 
@@ -27,6 +28,7 @@
         resources.style.display = 'block'; 
         services.style.display = 'block'; 
         ftr.style.display = 'block';
+        copyright.style.display = 'block';
         particlesJS.style.visibility = 'visible'; 
         e.stopPropagation();
         e.preventDefault();
