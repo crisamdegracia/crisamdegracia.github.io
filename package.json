@@ -5,12 +5,12 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "index.html"
+    "start": "index.html"
   },
   "author": "sambeetech",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.15.3",
+    "express": "^4.16.3",
     "typed.js": "^2.0.5"
   }
 }
