@@ -43,7 +43,9 @@
     <meta http-equiv="EXPIRES" content="-1" />   
     <link rel="icon" href="../assets/images/sm2.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <!--        <link rel="stylesheet" href="/public/bootstrap/css/bootstrap.css">-->
+
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@10.19.0/dist/lazyload.min.js"></script>    
+
     <link rel="stylesheet" href="/css/main.css">
     <link  href="/public/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cinzel|Sedgwick+Ave+Display" rel="stylesheet">
@@ -63,18 +65,21 @@
 
     <div id="particles-js"></div>
     <div class="container" id="home">
-      <nav class="navbar navbar-toggleable-sm fixed-top navbar-inverse shrinkBack">
-        <!--navbar-inverse bg-inverse-->
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navBar" aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation">
+      <nav class="navbar navbar-expand-sm fixed-top navbar-inverse shrinkBack">
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBar" aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+
+
         <img src="/assets/images/flogo.png" class="nav-top-img d-inline-block align-top" alt="my_logo">
-        <!--                <h5 id="titleName">Crisam De Gracia</h5>-->
+        
 
         <div class="collapse navbar-collapse "  id="navBar">
           <ul class="nav navbar-nav ml-auto" role="tablist">
             <li class="nav-item">
-              <a class="nav-link bg-white" href="#home">Home<span class="sr-only">(current)</span></a>
+              <a class="nav-link active" href="#home">Home<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#about">About</a>
@@ -83,7 +88,7 @@
               <a class="nav-link" href="#project">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -94,7 +99,7 @@
     <div id="homeMain" class="mb-5">
       <div class="container text-center">
         <div class="col-md-6 m-auto">
-          <h4 id="welcomeTitle">Web Consultant For Your Business?</h4>
+<!--          <h4 id="welcomeTitle">Do you want less...</h4>-->
           <hr>
           <span id="typed" class="typecss"></span>
         </div>
@@ -117,17 +122,17 @@
           <div class="col-4 col-sm-4 col-md-4 col-lg-2 my-3 px-0"><i class="devicon-github-plain-wordmark colored text-danger icon"></i></div>
           <div class="col-4 col-sm-4 col-md-4 col-lg-2 my-3 px-0"><i class="devicon-bootstrap-plain-wordmark colored icon"></i></div>
 
-          <div class="col-4 col-sm-4 col-md-4 col-lg-2 my-3 px-0"><i class="devicon-heroku-plain-wordmark colored icon"></i></div>
+<!--          <div class="col-4 col-sm-4 col-md-4 col-lg-2 my-3 px-0"><i class="devicon-heroku-plain-wordmark colored icon"></i></div>-->
           <div class="col-4 col-sm-4 col-md-4 col-lg-2 my-3 px-0"><i class="devicon-mysql-plain-wordmark colored icon"></i></div>
           <div class="col-4 col-sm-4 col-md-4 col-lg-2 my-3 px-0"><i class="devicon-javascript-plain colored icon"></i></div>
 
-          <div class="col-4 col-sm-4 col-md-4 col-lg-2 my-3 px-0"><i class="devicon-mongodb-plain-wordmark colored icon"></i></div>
-          <div class="col-4 col-sm-4 col-md-4 col-lg-2 my-3 px-0"><i class="devicon-nodejs-plain colored icon"></i></div>
+<!--          <div class="col-4 col-sm-4 col-md-4 col-lg-2 my-3 px-0"><i class="devicon-mongodb-plain-wordmark colored icon"></i></div>-->
+<!--          <div class="col-4 col-sm-4 col-md-4 col-lg-2 my-3 px-0"><i class="devicon-nodejs-plain colored icon"></i></div>-->
           <div class="col-4 col-sm-4 col-md-4 col-lg-2 my-3 px-0"><i class="devicon-php-plain colored icon"></i></div>
 
-          <div class="col-4 col-sm-4 col-md-4 col-lg-2 my-3 px-0"><img class="js-lazy-image img-fluid w-25" data-src="./assets/images/ai.png" src="./assets/images/ai.png"></div>
+          <div class="col-4 col-sm-4 col-md-4 col-lg-2 my-3 px-0"><img class="js-lazy-image icon" data-src="./assets/images/ai.png" src="./assets/images/ai.png"></div>
 
-          <div class="col-4 col-sm-4 col-md-4 col-lg-2 my-3 px-0"><img  class="js-lazy-image img-fluid w-25" data-src="./assets/images/ps.png" src="./assets/images/ps.png"></div>
+          <div class="col-4 col-sm-4 col-md-4 col-lg-2 my-3 px-0"><img  class="js-lazy-image  icon" data-src="./assets/images/ps.png" src="./assets/images/ps.png"></div>
         </div>    
       </div>
     </div>
@@ -135,93 +140,6 @@
     <div class="clearfix"></div>
 
 
-    <div id="about" class="my-5">
-      <div class="container">
-        <div class="text-center py-5">
-
-          <h4 id="aboutMeHeader" class="display-4" >About me</h4>
-          <img id="proPic" class="js-lazy-image" data-src="assets/images/myphoto.jpg" src="assets/images/myphoto.jpg" alt="2x2ProfilePicture">
-          <div class="col-12 col-sm-12 col-md-12 col-lg-12 m-auto mainContent hiddenText aboutContent ">
-            <h4 class="generalFont" id="myName">Crisam De Gracia</h4>
-            <div class="container">
-              <div class="row">
-                <div class="col-4 col-sm-4 col-md-4 col-lg-4">
-                  <a href="https://github.com/crisamdegracia">
-                    <i class="fa fa-github px-0 profile-social-icon"></i>
-                  </a>
-                </div>  
-
-                <div class="col-4 col-sm-4 col-md-4 col-lg-4">
-                  <a href="https://twitter.com/crisamdegracia">
-                    <i class="fa fa-twitter px-0 profile-social-icon"></i>
-                  </a>
-                </div> 
-                <div class="col-4 col-sm-4 col-md-4 col-lg-4 ">
-                  <a href="https://www.linkedin.com/in/crisam-de-gracia-48a148103/">
-                    <i class="fa fa-linkedin profile-social-icon" id="linkedin-icon"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <hr>
-
-            <div class="slideEffect"> 
-
-              <div id="aboutMeText">
-                <p class="generalFont">
-                  Just call me Sam.  <strong class="text-warning"></strong>
-                </p>
-              </div>
-              <button class="btn btn-primary btn-sm readMoreBtn" id="readMoreBtn"> &raquo; read more...</button>
-
-
-              <div  id="readMoreText">
-                <p class="generalFont text-left">
-                  Crisam is a <strong class="text-warning"> self taught </strong> Web Developer who is mastering his crafts with the above displayed technologies.
-                  Well, 
-
-                  Sam took and finishes several courses online to help him gain essential knowledge to grow as a <strong class="text-warning"> Web Developer</strong> and aside from learning web technologies, Sam is a stock market <strong class="text-warning"> investor</strong> in the <strong class="text-warning">Philippines</strong> and currently working as a <strong class="text-warning"> Chef </strong> with 8 years of working with fast-paced environment.
-                </p>
-                <!--
-
-<strong class="text-primary">Flatiron School</strong> - has an intensive set of curiculum for 
-JavaScript. Sam took almost 3 months completing a free set curiculum.
-</p>
-<p class="generalFont text-left">
-<strong class="text-success">CodeCademy</strong> - has an excellent place to learn most of the  technology languages on web development for Free, Sam took  HTML & CSS, PHP, Javascript, Git and Command Line.   
-</p>
-<p class="generalFont text-left">
-<strong class="text-danger">Udemy</strong> - This is were Sam started to invest money and time, He bought The ff:
-<br><br>The Complete Web Developer Course 2.0 by <em>Rob Percival,</em> which covers PHP, MySQL,  HTML & HTML5 , CSS & CSS3, Bootstrap 4, APIs and Jquery.<br><br> 
-Javascript :  Understanding The Weird Parts by <em>Anthony Alicea</em> Tackles In-depth topics about Javascript.<br><br> 
-
-Wordpress Theme Development with Bootstrap by <em>Brad Husey, </em>topics in-depth from the name itself.<br><br> 
-
-The Web Developer Bootcamp by <em>Colt Steele,</em>  my favorite and one of the top course on UDEMY. covers Node.js, MongoDB, Javascript, Jquery, HTML5, CSS3, CRUD, Git, APIs and how to deploy with Heroku.
-<br><br> 
-Here's a few more! Angular,React,Java, AWS,IOS And Android Developement, Python 3 and many more! and Sam can't finished and learn them all up now, but definitely will come after them in the right time.
-
-</p>
-
--->
-                <p class="generalFont">
-
-                  Sam will value your <strong class="text-success">Money, Time, </strong> and <strong class="text-success">Help</strong> you fullfil what you desire . </p>
-                <!--
-Sam, grew up in the Philippines and he's 27 years old. Since he was a kid he always has an interest in computers and technologies. but his education becomes really hard to reach and to fulfill because of some financial circumtances. So, Sam ended up being a chef/cook for almost a decade. while Sam ended up Undergraduate Of the course Information Technology it didn't hinder him to the right path.
-Sam started to build his skillset from mid year of 2016, up to the present. Sam is coding everyday to sharpen his skills and to learn new language technologies that would help him to achieve the greater goal of the employer and the future clients or else he's gonna end up with his own start up (wish him luck! yeah!).
-<br><br>
-Sam today believed that being a programmer/developer is a life long journey commitment to the core of our technologies today. 
-<br><br>
-His main goal is to grow everyday. Learn . Build  . Achieve . and Make things Happen.
--->
-                <a class="btn  btn-primary btn-sm readLessBtn" id="readLessBtn"> &raquo;read less..</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
 
     <div id="project">
@@ -338,14 +256,106 @@ His main goal is to grow everyday. Learn . Build  . Achieve . and Make things Ha
 
     </section>
 
+    <div id="about" class="my-5">
+      <div class="container">
+        <div class="text-center py-5">
 
-    <!--
-<div id="floatingBtn" data-toggle="modal" data-target="#myModal">
-<div>
-<img src="/assets/images/hireme.jpg" style="width: 50px; height: 50px; border-radius: 50%" alt="">
-</div>
-</div>
+          <h4 id="aboutMeHeader" class="display-4" >About me</h4>
+          <img id="proPic" class="js-lazy-image" data-src="assets/images/myphoto.jpg" src="assets/images/myphoto.jpg" alt="2x2ProfilePicture">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 m-auto mainContent hiddenText aboutContent ">
+            <h4 class="generalFont" id="myName">Crisam De Gracia</h4>
+            <div class="container">
+              <div class="row">
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                  <a href="https://github.com/crisamdegracia">
+                    <i class="fa fa-github px-0 profile-social-icon"></i>
+                  </a>
+                </div>  
+
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                  <a href="https://twitter.com/crisamdegracia">
+                    <i class="fa fa-twitter px-0 profile-social-icon"></i>
+                  </a>
+                </div> 
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 ">
+                  <a href="https://www.linkedin.com/in/crisam-de-gracia-48a148103/">
+                    <i class="fa fa-linkedin profile-social-icon" id="linkedin-icon"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <hr>
+
+            <div class="slideEffect"> 
+
+              <div id="aboutMeText">
+                <p class="generalFont">
+                  Just call me Sam.  <strong class="text-warning"></strong>
+                </p>
+              </div>
+              <button class="btn btn-primary btn-sm readMoreBtn" id="readMoreBtn"> &raquo; read more...</button>
+
+
+              <div  id="readMoreText">
+                <p class="generalFont text-left">
+                  <!--
+Crisam is a <strong class="text-warning"> self taught </strong> Web Developer who is mastering his crafts with the above displayed technologies.
+Well, 
+
+Sam took and finishes several courses online to help him gain essential knowledge to grow as a <strong class="text-warning"> Web Developer</strong> and aside from learning web technologies, Sam is a stock market <strong class="text-warning"> investor</strong> in the <strong class="text-warning">Philippines</strong> and currently working as a <strong class="text-warning"> Chef </strong> with 8 years of working with fast-paced environment.
+
+
 -->
+
+                  Sam, grew up in the Philippines and he's 28 years old. Since he was a kid he always has an interest in computers and technologies. but his education becomes really hard to reach and to fulfill because of some financial circumtances. So, Sam ended up being a chef/cook for almost a decade. while Sam ended up undergraduate of the course Information Technology it didn't hinder him to the right path.
+                  Sam started to build his skillset from mid year of 2016, up to the present. Sam is coding everyday to sharpen his skills and to learn new language technologies that would help him to achieve the greater goal of the employer and the future clients or else he's gonna end up with his own start up (wish him luck! yeah!).
+                  <br><br>
+                  Sam today believed that being a programmer/developer is a life long journey commitment to the core of our technologies today. 
+                  <br><br>
+                  His main goal is to grow everyday. Learn . Build  . Achieve . and Make things Happen.
+
+
+                </p>
+
+                <p class="about-headline-middle">Some of the online platform's I learn from.</p>
+                <br>
+                <strong class="text-primary">Flatiron School</strong> 
+                <p class="generalFont">
+                  - has an intensive set of curiculum for 
+                  JavaScript. Sam took almost 3 months completing a free set curiculum.
+                </p>
+                <strong class="text-success">CodeCademy</strong> 
+                <p class="generalFont text-left">
+                  - has an excellent place to learn most of the  technology languages on web development for Free, Sam took  HTML & CSS, PHP, Javascript, Git and Command Line.   
+                </p>
+                <strong class="text-danger">Udemy</strong>
+                <p class="generalFont text-left">
+                  - This is were Sam started to invest money and time, He bought The ff:
+                  <br><br>The Complete Web Developer Course 2.0 by <em>Rob Percival,</em> which covers PHP, MySQL,  HTML & HTML5 , CSS & CSS3, Bootstrap 4, APIs and Jquery.<br><br> 
+                  Javascript :  Understanding The Weird Parts by <em>Anthony Alicea</em> Tackles In-depth topics about Javascript.<br><br> 
+
+                  Wordpress Theme Development with Bootstrap by <em>Brad Husey, </em>topics in-depth from the name itself.<br><br> 
+
+                  The Web Developer Bootcamp by <em>Colt Steele,</em>  my favorite and one of the top course on UDEMY. covers Node.js, MongoDB, Javascript, Jquery, HTML5, CSS3, CRUD, Git, APIs and how to deploy with Heroku.
+                  <br><br> 
+                  Here's a few more! Angular,React,Java, AWS,IOS And Android Developement, Python 3 and many more! and Sam can't finished and learn them all up now, but definitely will come after them in the right time.
+
+                </p>
+
+
+                <p class="generalFont">
+
+                  Sam will value your <strong class="text-success">Money, Time, </strong> and <strong class="text-success">Help</strong> you fullfil what you desire . </p>
+
+
+                <a class="btn  btn-primary btn-sm readLessBtn" id="readLessBtn"> &raquo;read less..</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="clearfix"></div>
 
     <section id="ftr">
@@ -387,10 +397,14 @@ His main goal is to grow everyday. Learn . Build  . Achieve . and Make things Ha
 
     <div id="copyright">
 
-      <h3 class="lead"> Sam&copy; 2017 All rights reserved.</h3>
+      <h3 class="lead"> Sam&copy; 2018 All rights reserved.</h3>
     </div>
 
     <script src="js/lazyload.js"></script>
+
+
+
+
     <script type="text/javascript" src="/public/jquery.min.js"></script>
     <script type="text/javascript" src="/js/loading.js"></script>
     <script type="text/javascript" src="/public/particles.js-master/particles.js"></script>
@@ -404,18 +418,18 @@ His main goal is to grow everyday. Learn . Build  . Achieve . and Make things Ha
     <script type="text/javascript" src="/public/typed.js"></script>
     <script type="text/javascript" src="/js/slide-in.js"></script>
     <script type="text/javascript" src="/js/readmore.js"></script>
-    <!--        <script type="text/javascript" src="/js/floatingBtn.js"></script>-->
+    <!--    <script type="text/javascript" src="/js/floatingBtn.js"></script>-->
 
 
     <script type="text/javascript">
       var typed = new Typed('#typed', {
-        strings: ["A coffee shop?","A Japanese Restaurant?","An Italian Restaurant?", "An online Shop? ^2000"],
-        startDelay:2000,
-        typeSpeed: 100,
-        backSpeed: 50,
+        strings: ["Hi there!","Congrats!","you came here","because you wanna get that project done right?","with less stress", "and less sleepless nights.", "can we talk about your project? ^500"],
+        startDelay: 1000,
+        typeSpeed: 50,
+        backSpeed: 10,
         //                fadeOut: true,
         onComplete: () => {
-          $('#typed').html("Let me help you build your Dream <span class='text-warning text-lead'> WEB APP!</span>");
+          $('#typed').html("Are you ready?");
         }
       });
 
