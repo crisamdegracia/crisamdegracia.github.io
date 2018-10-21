@@ -86,7 +86,7 @@ canvas {
   font-weight: 700;
   -webkit-transition: 450ms;
   transition:450ms;
-  
+
 }
 
 .nav-top-img { 
@@ -328,8 +328,34 @@ a.active {
   margin: 150px auto;
   padding: 0px 5px 5px 5px;
   border-radius: 30px;
+  position: relative;
 }
 
+.project__tag {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  height: 100px;
+  width: 30px;
+  background-color: yellow;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 51% 83%, 0 100%, 1% 0);
+  clip-path: polygon(100% 0, 100% 100%, 51% 83%, 0 100%, 1% 0);
+}
+
+.project__tag span {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  text-transform: uppercase;
+  color: darkgreen;
+font-weight: 800;
+}
+
+.project__tag--paid {
+    font-size: ;
+}
+.project__tag--course {
+ font-size: 10px ;
+}
 .proj-img-container {
   text-align: center;
   padding: 5px 10px;
@@ -716,21 +742,21 @@ a.active {
 }
 
 @media only screen and (max-width: 771px) {
-  
+
   .navbar-toggler {
     border: 1px solid #ddd;
   }
-  
+
   .navbar-toggler-icon {
-    
+
     border: 1px solid #ddd;
   }
 
-  
+
   .nav-link {
     background-color: #323;
   }
-  
+
   .collapse {
     background-color: ;
   }
@@ -741,7 +767,7 @@ a.active {
     height: 20px;
     width: 100%;
     padding: 0;
-  
+
   }
   .contact-head p {
     font-size: 11px;
