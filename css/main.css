@@ -272,7 +272,9 @@ a.active {
 
 }
 
-
+.lazy-text-custom {
+    display: none;
+}
 
 /*ABOUT ME======================================*/
 .generalFont {
@@ -364,6 +366,7 @@ font-weight: 800;
   text-align: center;
   padding: 5px 10px;
   margin: 10px auto;
+    border: 2px solid #ddd;
 }
 .proj-overlay {
   position: absolute;
@@ -442,7 +445,7 @@ font-weight: 800;
 
 /*PROJECTS=======================================================*/
 
-/*OFFER=========================================================*/
+/*SERVICE=========================================================*/
 
 #offer ul {
   list-style: none;
@@ -468,7 +471,9 @@ font-weight: 800;
   margin: 0px auto;
 
 }
-
+.service-div {
+    border: 1px solid #ddd;
+}
 /*----Pricing---------------*/
 
 
@@ -547,7 +552,7 @@ font-weight: 800;
 }
 
 #map {
-  height: 50vh;
+  height: 25vh;
 }
 
 #copyright {

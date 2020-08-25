@@ -16,6 +16,7 @@
         particlesJS   = document.getElementById('particles-js'),
         ftr           = document.getElementById('ftr'),
         copyright     = document.getElementById('copyright');
+        
 
 
     window.addEventListener('load', function(e){
@@ -32,6 +33,8 @@
         particlesJS.style.visibility = 'visible'; 
         e.stopPropagation();
         e.preventDefault();
+        
+        return;
     })
 
 })();
