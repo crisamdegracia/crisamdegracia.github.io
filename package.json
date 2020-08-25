@@ -10,7 +10,7 @@
   "author": "sambeetech",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3",
-    "typed.js": "^2.0.5"
+    "express": "^4.17.1",
+    "typed.js": "^2.0.11"
   }
 }
