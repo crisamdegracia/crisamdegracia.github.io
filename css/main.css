@@ -353,6 +353,10 @@ font-weight: 800;
 .project__tag--paid {
     font-size: ;
 }
+
+.project__tag--current {
+    font-size: 8px;
+}
 .project__tag--course {
  font-size: 10px ;
 }
