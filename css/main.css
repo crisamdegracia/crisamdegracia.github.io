@@ -53,6 +53,11 @@ canvas {
   padding-right: 5px;
 }
 
+.navbar {
+   
+}
+
+
 #particles-js {
   width: 90%;
   height: 90%;
@@ -90,8 +95,7 @@ canvas {
 }
 
 .nav-top-img { 
-  height: 13vh;
-  width: 13vh;
+  width: 5vh;
   border-radius: 50px;
   box-shadow: 2px 2px 0 yellow;
 }
@@ -102,10 +106,10 @@ canvas {
 }
 
 .navbar {
-
   padding-bottom: 0;
   width: 100%;
   text-align: center;
+  height: 10vh;
 }
 
 a,
@@ -171,18 +175,36 @@ a.active {
 
 /*First Container*/
 
-#homeMain .container {
+#homeMain {
+/*    height: 40vh;*/
+
+}
+.homemain--inner-div {
+    padding: 40px;
+     background:rgba(255,255,255, 0.2);
+    border-radius: 30px;
+    
+}
+ .container {
   height: 50%;
   width: 90%;
   margin-top: 100px;
-  margin-bottom: 270px;
+ 
+}
+.margin-bottom {
+     margin-bottom: 270px;
 }
 
 #homeMain .container h4 {
   color: #ddd;
   text-align: center;   
 }
-
+#home {
+/*
+    background-color: blue;
+    height: 10vh;
+*/
+}
 
 .typecss {
   z-index: 99;
