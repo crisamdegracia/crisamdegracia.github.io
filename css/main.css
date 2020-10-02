@@ -87,7 +87,9 @@ canvas {
 
 .shrink {
   margin-top: 20px;
-  background: #323;
+/*  background: #323;*/
+/*  background: darkgoldenrod;*/
+  background: rgba(250, 250, 240, 0.1);
   font-weight: 700;
   -webkit-transition: 450ms;
   transition:450ms;
@@ -183,15 +185,19 @@ a.active {
     padding: 40px;
      background:rgba(255,255,255, 0.2);
     border-radius: 30px;
+    border: 2px solid gold
     
 }
+
  .container {
   height: 50%;
   width: 90%;
   margin-top: 100px;
      margin-bottom: 200px;
+    
  
 }
+
 .margin-bottom {
      margin-bottom: 270px;
 }
@@ -245,6 +251,7 @@ a.active {
 
   background:rgba(255,255,255, 0.2);
   padding: 0 30px;
+    border: 2px solid gold
 }
 
 /*Skill Set*/
@@ -308,6 +315,7 @@ a.active {
 
 .mainContent {
   border-radius: 20px;
+    border: 2px solid gold
 
 }
 .about-headline-middle {
@@ -348,12 +356,14 @@ a.active {
 /*PROJECTS=======================================================*/
 
 #project {
+    
   width: 75%;
   background-color: rgba(255, 255, 255, 0.2);
   margin: 150px auto;
   padding: 0px 5px 5px 5px;
   border-radius: 30px;
   position: relative;
+    border: 2px solid gold
 }
 
 .project__tag {
@@ -483,6 +493,7 @@ font-weight: 800;
   /*    height: 500px;*/
   /*    border: 1px solid red;*/
   margin: 100px auto;
+    border: 2px solid gold
 }
 #offerHeader {
   background: rgba(255,255,000, 0.2);
@@ -571,7 +582,8 @@ font-weight: 800;
 
 #ftr i {
   height: 10vh;
-  color: #fff;
+  color: goldenrod;
+  display: inline;
 }
 
 #map {
