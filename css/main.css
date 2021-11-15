@@ -256,6 +256,11 @@ a.active {
 
 /*Skill Set*/
 
+.custom-image__icon--divi {
+  width: 50px !important;
+}
+
+
 #resourcesTitle {
   background: rgba(255,255,000, 0.2);
   border-radius: 50px;
