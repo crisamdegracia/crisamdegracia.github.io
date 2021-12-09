@@ -260,6 +260,10 @@ a.active {
   width: 50px !important;
 }
 
+.custom-image__icon--divi {
+  width: 50px !important;
+}
+
 
 #resourcesTitle {
   background: rgba(255,255,000, 0.2);
