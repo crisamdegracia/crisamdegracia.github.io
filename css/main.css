@@ -178,8 +178,19 @@ a.active {
 /*First Container*/
 
 #homeMain {
-/*    height: 40vh;*/
+width: 100%;
+/* background-color: #fff; */
 
+}
+
+#homeMain h1 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 60px;
+}
+#homeMain h3 {
+ color: #ddd;
+ font-weight: 200;
 }
 .homemain--inner-div {
     padding: 40px;

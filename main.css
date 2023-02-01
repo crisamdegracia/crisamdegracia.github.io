@@ -6,9 +6,9 @@ html, body {
     widows: 95%;
 }
 
-{
+/* {
     border: 1px solid red;
-}
+} */
 
 body {
     background: #111;
@@ -136,3 +136,6 @@ h1,
     border-radius: 20px;
 }
 
+.new-hero-div {
+    background-color: #fff !important;
+}
