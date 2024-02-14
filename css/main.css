@@ -35,7 +35,7 @@ canvas {
 }
 
 .contact-head {
-  height: 25px;
+  height: 40px;
   padding: 0 20px;
   position: fixed;
   top: -3px;
@@ -402,11 +402,11 @@ width: 100%;
   text-orientation: upright;
   text-transform: uppercase;
   color: darkgreen;
-font-weight: 800;
+  font-weight: 800;
 }
 
 .project__tag--paid {
-    font-size: ;
+    /* font-size: ; */
 }
 
 .project__tag--current {
