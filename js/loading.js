@@ -16,6 +16,7 @@
         particlesJS   = document.getElementById('particles-js'),
         ftr           = document.getElementById('ftr'),
         copyright     = document.getElementById('copyright');
+        wordcatch     = document.getElementById('wordcatch');
         
 
 
@@ -29,6 +30,7 @@
         resources.style.display = 'block'; 
         services.style.display = 'block'; 
         ftr.style.display = 'block';
+        wordcatch.style.display = 'block';
         copyright.style.display = 'block';
         particlesJS.style.visibility = 'visible'; 
         e.stopPropagation();

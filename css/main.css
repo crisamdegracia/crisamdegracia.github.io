@@ -525,8 +525,19 @@ width: 100%;
   margin: 0px auto;
 
 }
-.service-div {
+#wordcatch {
+  display: none;
+  padding: 100px 0;
+}
+.service-wrapper {
     border: 1px solid #ddd;
+    height: 100%;
+    padding: 10px 20px;
+}
+@media screen and (max-width:991px){
+  .service-div   {
+    margin-bottom: 10px;
+  }
 }
 /*----Pricing---------------*/
 
@@ -585,9 +596,6 @@ width: 100%;
   }
 }
 
-
-
-
 /*-----------------------*/
 
 /*OFFER=========================================================*/
@@ -596,7 +604,7 @@ width: 100%;
 #ftr {
   margin: 0 auto;
   width: 100%;
-  padding: 30px;
+  /* padding: 30px; */
   background: #000;
 }
 
@@ -816,13 +824,11 @@ width: 100%;
     border: 1px solid #ddd;
   }
 
-
   .nav-link {
-    background-color: #323;
+    /* background-color: #323; */
   }
-
-  .collapse {
-    background-color: ;
+  #homeMain h1 {
+    font-size: 40px;
   }
 }
 
@@ -843,4 +849,11 @@ width: 100%;
     margin-top: 10px;
     height: 60px;
   }
+}
+
+@media screen and (max-width:767px) {
+  .service-div:not(:first-child) {
+    /* margin-top: 20px; */
+}
+  
 }
