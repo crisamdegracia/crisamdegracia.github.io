@@ -1,0 +1,36 @@
+.hero {
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+	&-container {
+		display: flex;
+	}
+	&__col-left {
+		display: flex;
+		flex-direction: column;
+		gap: 80px;
+		justify-content: space-around;
+		flex: 0 60%;
+
+		&-bottom {
+			display: flex;
+			gap: 20px;
+		}
+	}
+
+	&__col-right {
+		flex: 0 40%;
+	}
+	h1 {
+		font-weight: 700;
+		line-height: .8;
+		font-size: 5rem;
+	}
+	&__divider {
+		margin-top: 40px;
+		width: 8%;
+		height: 8px;
+		background-color: $accent;
+	}
+
+	
+}

@@ -1,0 +1,101 @@
+.header {
+	background-color: $primary;
+	align-items: center;
+	padding-top: 3rem;
+
+	@media screen and (max-width:768px){
+		padding-top: unset;
+	}
+	&__main {
+		display: flex;
+		align-items: center;
+		
+		@media screen and (max-width:768px){
+			flex-direction: column;
+			justify-content: center;
+		
+		}
+	}
+	&__col-right {
+		flex: 0 70%;
+		
+		@media screen and (max-width:768px){
+			flex: 0 100%;
+		}
+		@media screen and (max-width:768px){
+			display: none;
+		}
+		ul {
+			padding-left: 0;
+			display: flex;
+			list-style: none;
+			gap: 50px;
+			justify-content: flex-end;
+			flex-wrap: wrap;
+		}
+	}
+	&__list-link {
+		color: $text;
+		font-size: 1.5rem;
+		text-decoration: none;
+		transition: .5s ease-in;
+		font-weight: 700;
+	}
+	&__list-link:hover,
+	&__list-link:active {
+		color: #fff;
+		border-bottom: 2px solid #fff;
+	}
+	&__list-link--active {
+		color: #fff;
+		transition: .3s ease-in;
+	}
+	&__col-left {
+		flex: 0 30%;
+
+		@media screen and (max-width:768px){
+			flex: 0 100%;
+		}
+	}
+	&__mobile {
+		display: none;
+		@media screen and (max-width:768px){
+			display: flex;
+			flex-direction: column;
+			transition: .7s ease;
+			width: 100%;
+		}
+		&-lists {
+			padding-left: 0;
+			max-height: 0;
+			opacity: 0;
+			overflow: hidden;
+			transition: max-height 0.2s ease, opacity 0.5s ease-in;
+			text-align: center;
+			padding-top: 10px;
+		}
+		&-burger {
+			display: flex;
+			gap: 7px;
+			flex-direction: column;
+			align-items: center;
+			
+		}
+		&-burger span {
+			width: 50px;
+			height: 6px; 
+			border-radius: 5px;
+			background-color: #fff;
+		}
+		&-list {
+			list-style: none;
+			
+		}
+		&-lists-active {
+			max-height: 100%;
+			opacity: 1;
+
+		}
+	}
+
+}

@@ -1,0 +1,15 @@
+$primary : #333646;
+$secondary : #2d4156;
+$accent : #ffc25c;
+$text : #666874;
+$theme-white : #eaebec;
+ 
+.theme-primary {
+	background-color: $primary;
+}
+.theme-accent {
+	background-color: $accent;
+}
+.theme-text-white {
+	color: $theme-white;
+}
