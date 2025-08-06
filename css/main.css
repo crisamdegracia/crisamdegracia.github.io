@@ -857,3 +857,7 @@ width: 100%;
 }
   
 }
+
+ .mainContent img {
+	width: 50px;
+ }
