@@ -35,6 +35,59 @@ if (window.matchMedia("(hover: hover)").matches) {
 	});
 }
 
+/* ---------- contact form ---------- */
+// Delivered by Formsubmit (no backend on GitHub Pages). The first ever submission makes
+// Formsubmit email crisamdegracia@gmail.com an activation link; confirm it once and it works.
+const contactForm = document.getElementById("contactForm");
+if (contactForm) {
+	const ENDPOINT = "https://formsubmit.co/ajax/crisamdegracia@gmail.com";
+	const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+	const status = contactForm.querySelector(".form-status");
+	const submit = contactForm.querySelector('button[type="submit"]');
+	const say = (text, kind = "") => { status.textContent = text; status.dataset.kind = kind; };
+
+	contactForm.addEventListener("submit", async (e) => {
+		e.preventDefault();
+		const data = Object.fromEntries(new FormData(contactForm));
+		if (data._honey) return say("Thanks!", "ok"); // hidden field filled in: a bot, pretend it worked
+
+		const name = String(data.name || "").trim();
+		const email = String(data.email || "").trim();
+		const message = String(data.message || "").trim();
+		const topic = String(data.topic || "");
+		if (!name || !message || !EMAIL_RE.test(email)) {
+			return say("Please add your name, a valid email and a message.", "error");
+		}
+
+		submit.disabled = true;
+		say("Sending...");
+		try {
+			const res = await fetch(ENDPOINT, {
+				method: "POST",
+				headers: { "Content-Type": "application/json", Accept: "application/json" },
+				body: JSON.stringify({
+					name, email, topic, message,
+					_subject: `Portfolio inquiry: ${topic} (${name})`,
+					_template: "table",
+					_captcha: "false",
+				}),
+			});
+			const out = await res.json().catch(() => ({}));
+			if (!res.ok || String(out.success) === "false") throw new Error(out.message || res.status);
+
+			contactForm.reset();
+			say("Thanks! I'll reply soon.", "ok");
+			// same event name Auriros uses; no personal data in the dataLayer
+			window.dataLayer = window.dataLayer || [];
+			window.dataLayer.push({ event: "generate_lead", form_id: "portfolio_contact", topic });
+		} catch (err) {
+			say("Couldn't send that. Please email me at crisamdegracia@gmail.com instead.", "error");
+		} finally {
+			submit.disabled = false;
+		}
+	});
+}
+
 /* ---------- tools marquee: duplicate the list so the CSS loop is seamless ---------- */
 const marqueeTrack = document.querySelector(".marquee-track");
 if (marqueeTrack && !reduceMotion) {
