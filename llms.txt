@@ -1,0 +1,26 @@
+# Crisam De Gracia (Sam)
+
+> Portfolio of Crisam "Sam" De Gracia: AI automation and technical SEO. Founder of Auriros, a digital marketing studio. Based in the Philippines, working with clients worldwide.
+
+## What I do
+
+- AI automation: AI agents, workflows and content pipelines built with n8n and LLM APIs (Claude, Gemini), with a human review step where it matters.
+- SEO and AEO: technical SEO, structured data, tracking (Search Console, Analytics, Tag Manager) and answer engine optimization, so sites get found on Google and cited by AI.
+- Web design and development: fast, easy-to-manage sites on WordPress, Astro or custom code.
+
+## Links
+
+- Portfolio: https://crisamdegracia.github.io/
+- Auriros (my studio): https://auriros.com
+- LinkedIn: https://www.linkedin.com/in/crisam-de-gracia-48a148103/
+- GitHub: https://github.com/crisamdegracia
+- Email: crisamdegracia@gmail.com
+
+## Selected work
+
+- Auriros: my own studio site (Astro, Cloudflare Pages), with AI-assisted imagery and answer-first content.
+- Automated blog content pipeline: keyword batch to scheduled WordPress post using n8n, Claude and Postgres, with human review.
+- On-page SEO for Canadian small businesses, tracked in Semrush.
+- Websites for clients in the Philippines, Japan and Singapore (WordPress, Elementor, custom PHP).
+
+I have 9 years of experience building websites.

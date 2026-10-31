@@ -16,15 +16,85 @@
 	<meta name="description" content="Crisam De Gracia (Sam) builds AI automation and does technical SEO. Founder of Auriros, a digital marketing studio." />
 	<meta name="author" content="Crisam De Gracia" />
 	<link rel="canonical" href="https://crisamdegracia.github.io/" />
+	<meta name="theme-color" content="#05040a" />
+	<meta name="color-scheme" content="dark" />
+	<script type="application/ld+json">
+	{
+	  "@context": "https://schema.org",
+	  "@graph": [
+	    {
+	      "@type": "Person",
+	      "@id": "https://crisamdegracia.github.io/#person",
+	      "name": "Crisam De Gracia",
+	      "alternateName": "Sam",
+	      "url": "https://crisamdegracia.github.io/",
+	      "image": "https://crisamdegracia.github.io/assets/images/og-image.png",
+	      "jobTitle": "Founder, Auriros",
+	      "description": "AI automation and technical SEO. Founder of Auriros, a digital marketing studio.",
+	      "worksFor": {
+	        "@type": "Organization",
+	        "name": "Auriros",
+	        "url": "https://auriros.com"
+	      },
+	      "address": {
+	        "@type": "PostalAddress",
+	        "addressCountry": "PH"
+	      },
+	      "knowsAbout": [
+	        "AI automation",
+	        "Workflow automation",
+	        "Technical SEO",
+	        "Answer engine optimization",
+	        "Web development",
+	        "WordPress"
+	      ],
+	      "sameAs": [
+	        "https://auriros.com",
+	        "https://www.linkedin.com/in/crisam-de-gracia-48a148103/",
+	        "https://github.com/crisamdegracia"
+	      ]
+	    },
+	    {
+	      "@type": "WebSite",
+	      "@id": "https://crisamdegracia.github.io/#website",
+	      "url": "https://crisamdegracia.github.io/",
+	      "name": "Crisam De Gracia",
+	      "inLanguage": "en",
+	      "publisher": {
+	        "@id": "https://crisamdegracia.github.io/#person"
+	      }
+	    },
+	    {
+	      "@type": "ProfilePage",
+	      "@id": "https://crisamdegracia.github.io/#profile",
+	      "url": "https://crisamdegracia.github.io/",
+	      "name": "Crisam De Gracia | AI Automation & Technical SEO",
+	      "dateModified": "2026-10-31",
+	      "isPartOf": {
+	        "@id": "https://crisamdegracia.github.io/#website"
+	      },
+	      "mainEntity": {
+	        "@id": "https://crisamdegracia.github.io/#person"
+	      }
+	    }
+	  ]
+	}
+	</script>
 
 	<meta property="og:type" content="website" />
 	<meta property="og:site_name" content="Crisam De Gracia" />
 	<meta property="og:title" content="Crisam De Gracia | AI Automation &amp; Technical SEO" />
 	<meta property="og:description" content="I build AI automation and do technical SEO. Founder of Auriros, a digital marketing studio." />
 	<meta property="og:url" content="https://crisamdegracia.github.io/" />
-	<meta property="og:image" content="https://crisamdegracia.github.io/assets/images/Thumbnail-OG-logo.png" />
+	<meta property="og:image" content="https://crisamdegracia.github.io/assets/images/og-image.png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:alt" content="Crisam De Gracia: AI automation and technical SEO" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:creator" content="@crisamdegracia" />
+	<meta name="twitter:title" content="Crisam De Gracia | AI Automation &amp; Technical SEO" />
+	<meta name="twitter:description" content="I build AI automation and do technical SEO. Founder of Auriros, a digital marketing studio." />
+	<meta name="twitter:image" content="https://crisamdegracia.github.io/assets/images/og-image.png" />
 
 	<link rel="icon" href="/assets/images/sm2.png" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,12 +105,16 @@
 	<script type="importmap">
 		{
 			"imports": {
-				"three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+				"three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js",
 				"three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/",
-				"cannon-es": "https://cdn.jsdelivr.net/npm/cannon-es@0.20.0/dist/cannon-es.js"
+				"cannon-es": "https://cdn.jsdelivr.net/npm/cannon-es@0.20.0/dist/cannon-es.min.js"
 			}
 		}
 	</script>
+	<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js" />
+	<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/cannon-es@0.20.0/dist/cannon-es.min.js" />
+	<link rel="modulepreload" href="js/character.js" />
+	<link rel="modulepreload" href="js/techstack.js" />
 	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 	<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
@@ -52,6 +126,8 @@
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7LJDQ3J"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
+
+	<a class="skip-link" href="#main">Skip to content</a>
 
 	<div class="glow"></div>
 	<div class="spot"></div>
@@ -67,13 +143,16 @@
 		</nav>
 	</header>
 
-	<main>
+	<main id="main" tabindex="-1">
 		<!-- HERO -->
 		<section id="hero" class="screen">
 			<div class="panel hero-copy">
-				<p class="eyebrow">Hi, I'm Sam. I build</p>
-				<h1><span class="accent">AI</span><span>Automation</span></h1>
-				<p class="sub">&amp; technical SEO. Founder of Auriros, a digital marketing studio.</p>
+				<h1>
+					<span class="eyebrow">Hi, I'm Sam. I build</span>
+					<span class="accent">AI</span>
+					<span>Automation</span>
+					<span class="sub">&amp; technical SEO. Founder of Auriros, a digital marketing studio.</span>
+				</h1>
 				<div class="cta">
 					<a class="btn primary" href="#work">See my work</a>
 					<a class="btn" href="#contact">Get in touch</a>

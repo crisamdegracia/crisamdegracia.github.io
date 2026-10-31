@@ -16,12 +16,13 @@ export const view = { x: -0.25, y: 0, scale: 1, rotY: 0, vis: 1, monitor: 0 };
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+if (finePointer) document.documentElement.classList.add("orb-on");
 
 const canvas = document.getElementById("scene");
 const orb = document.getElementById("orb");
 
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
-renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, finePointer ? 2 : 1.5)); // phones: fewer pixels to shade
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 1.05;
 
@@ -371,7 +372,7 @@ window.addEventListener("pointermove", (e) => {
 	pointer.y = -((e.clientY / window.innerHeight) * 2 - 1);
 	orbTarget.x = e.clientX;
 	orbTarget.y = e.clientY;
-	if (finePointer) orb.style.opacity = "1";
+	if (finePointer) orb.style.opacity = e.target.closest && e.target.closest(".contact-form") ? "0" : "1"; // normal cursor over the form
 });
 document.addEventListener("pointerleave", () => { orb.style.opacity = "0"; });
 

@@ -36,7 +36,9 @@ html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-stopped { overflow: hidden; }
 
 @media (hover: hover) and (pointer: fine) {
-	html, body, a, button { cursor: none; }
+	/* only hide the system cursor once the orb exists (main JS adds .orb-on), so a failed script never leaves no cursor */
+	html.orb-on, html.orb-on body, html.orb-on a, html.orb-on button { cursor: none; }
+	html.orb-on .contact-form input, html.orb-on .contact-form textarea, html.orb-on .contact-form select { cursor: auto; }
 }
 
 /* ---------- fixed backdrop ---------- */
@@ -225,7 +227,7 @@ h2 .thin { font-weight: 500; color: var(--accent); }
 	font-size: 0.7rem;
 	letter-spacing: 0.18em;
 	text-transform: uppercase;
-	color: #6f6890;
+	color: #8f88ad;
 }
 .scroll-cue span { display: block; width: 1px; height: 38px; background: linear-gradient(var(--accent), transparent); animation: cue 2s ease-in-out infinite; transform-origin: top; }
 @keyframes cue { 0% { transform: scaleY(0); } 50% { transform: scaleY(1); } 100% { transform: scaleY(0); transform-origin: bottom; } }
@@ -482,7 +484,7 @@ h2 .thin { font-weight: 500; color: var(--accent); }
 	font-size: 0.72rem;
 	letter-spacing: 0.22em;
 	text-transform: uppercase;
-	color: #6f6890;
+	color: #8f88ad;
 }
 .marquee-viewport {
 	overflow: hidden;
@@ -534,7 +536,7 @@ h2 .thin { font-weight: 500; color: var(--accent); }
 .contact h2 { font-size: clamp(2rem, 4.6vw, 4rem); max-width: 14ch; }
 .contact .lead { max-width: 46ch; }
 .contact .row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
-.copyright { margin-top: 90px; font-size: 0.8rem; color: #6f6890; }
+.copyright { margin-top: 90px; font-size: 0.8rem; color: #8f88ad; }
 
 .contact-form {
 	display: flex;
@@ -567,7 +569,7 @@ h2 .thin { font-weight: 500; color: var(--accent); }
 .form-status { margin: 0; min-height: 1.4em; font-size: 0.9rem; color: #cfc4ff; }
 .form-status[data-kind="ok"] { color: #86efac; }
 .form-status[data-kind="error"] { color: #fca5a5; }
-.form-note { margin: 0; font-size: 0.75rem; color: #6f6890; }
+.form-note { margin: 0; font-size: 0.75rem; color: #8f88ad; }
 
 /* ---------- cursor orb ---------- */
 .orb {
@@ -611,3 +613,25 @@ h2 .thin { font-weight: 500; color: var(--accent); }
 	.scroll-cue span { animation: none; }
 	.skill .body { transition: none; }
 }
+
+/* ---------- accessibility ---------- */
+.skip-link {
+	position: fixed;
+	left: 16px;
+	top: -64px;
+	z-index: 100;
+	padding: 10px 18px;
+	border-radius: 999px;
+	background: var(--accent-strong);
+	color: #fff;
+	font-size: 0.85rem;
+	text-decoration: none;
+	transition: top 0.2s;
+}
+.skip-link:focus { top: 16px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+main:focus { outline: none; }
+
+/* the h1 now holds the whole headline (for search and screen readers), so reset the big-type styles on its small lines */
+.hero-copy h1 .eyebrow, .hero-copy h1 .sub { text-transform: none; line-height: 1.4; letter-spacing: normal; }
+.hero-copy h1 .sub { font-weight: 400; }
