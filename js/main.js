@@ -176,6 +176,8 @@ if (gsap && ScrollTrigger) {
 	["about", "work", "contact"].forEach((id) => {
 		ScrollTrigger.create({
 			trigger: `#${id}`,
+			// the Work link stays lit through the SEO & automation grid too
+			endTrigger: id === "work" ? "#more" : `#${id}`,
 			start: "top 50%",
 			end: "bottom 50%",
 			onToggle: (self) => {
@@ -230,20 +232,29 @@ if (gsap && ScrollTrigger) {
 		if (reduceMotion) {
 			work.classList.add("native-scroll");
 		} else {
-			const distance = () => Math.max(track.scrollWidth - window.innerWidth, 0);
-			gsap.to(track, {
-				x: () => -distance(),
-				ease: "none",
-				scrollTrigger: {
-					trigger: work,
-					start: "top top",
-					end: () => "+=" + distance(),
-					pin: true,
-					scrub: 0.6,
-					anticipatePin: 1,
-					invalidateOnRefresh: true,
-					onUpdate: (self) => { if (bar) bar.style.transform = `scaleX(${self.progress})`; },
-				},
+			const mm = gsap.matchMedia();
+			// desktop: vertical scroll drives the horizontal slide
+			mm.add("(min-width: 801px)", () => {
+				const distance = () => Math.max(track.scrollWidth - window.innerWidth, 0);
+				gsap.to(track, {
+					x: () => -distance(),
+					ease: "none",
+					scrollTrigger: {
+						trigger: work,
+						start: "top top",
+						end: () => "+=" + distance(),
+						pin: true,
+						scrub: 0.6,
+						anticipatePin: 1,
+						invalidateOnRefresh: true,
+						onUpdate: (self) => { if (bar) bar.style.transform = `scaleX(${self.progress})`; },
+					},
+				});
+			});
+			// phones: a pinned slide fights thumb scrolling, so the row just swipes natively
+			mm.add("(max-width: 800px)", () => {
+				work.classList.add("native-scroll");
+				return () => work.classList.remove("native-scroll");
 			});
 		}
 	}

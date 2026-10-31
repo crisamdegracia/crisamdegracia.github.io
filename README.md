@@ -1,6 +1,6 @@
 # crisamdegracia.github.io
 
-Personal portfolio of Crisam "Sam" De Gracia: AI automation and technical SEO, founder of [Auriros](https://auriros.com).
+Personal portfolio of Crisam "Sam" De Gracia: web design and development, with technical SEO and AI automation. Founder of [Auriros](https://auriros.com).
 
 Live at https://crisamdegracia.github.io/
 
@@ -9,7 +9,7 @@ Live at https://crisamdegracia.github.io/
 A static, build-free single page served by GitHub Pages.
 
 - A 3D character (Three.js) that follows the cursor, with scroll-driven scenes (GSAP ScrollTrigger + Lenis)
-- A horizontal "My Work" section, a physics "techstack" (cannon-es) and a looping tools marquee
+- A horizontal "My Work" slide of websites (a plain swipeable row on phones), a grid of SEO and automation projects below it, a physics "techstack" (cannon-es) and a looping tools marquee
 - Plain HTML content, so it still reads without JavaScript
 
 Libraries load from CDNs with pinned versions (see the import map and script tags in `index.html`).
@@ -44,5 +44,5 @@ Google Tag Manager `GTM-W7LJDQ3J` (GA4 stream `G-YE1C3HM5SW`). The contact form 
 
 ## Notes
 
-- Project thumbnails: add a screenshot to `assets/images/`, convert it to a 16:10 WebP in `assets/images/work/`, and add a card in `index.html`. Numbers are automatic.
+- Project thumbnails: add a screenshot to `assets/images/`, convert it to a 16:10 WebP in `assets/images/work/`, and add a card in `index.html`: inside `.work-track` for a website (the slide), or inside `.more-grid` for SEO and automation work. Numbers are automatic.
 - The page respects `prefers-reduced-motion`.

@@ -206,6 +206,9 @@ h2 .thin { font-weight: 500; color: var(--accent); }
 	color: transparent;
 }
 
+/* second headline line: smaller than the big word so "that get found" stays on one line */
+.hero-copy h1 .line2 { font-size: 0.72em; line-height: 1.1; margin-top: 6px; }
+
 .hero-copy .sub {
 	margin: 14px 0 0;
 	font-family: var(--body);
@@ -461,8 +464,67 @@ h2 .thin { font-weight: 500; color: var(--accent); }
 .work-progress { margin: 0 var(--gutter); height: 2px; background: var(--line); position: relative; }
 .work-progress i { position: absolute; inset: 0; background: var(--accent); transform: scaleX(0); transform-origin: left; }
 
-.work.native-scroll .work-viewport { overflow-x: auto; }
+/* no pinned slide (phones, reduced motion): the row is a plain swipeable strip that snaps card by card */
+.work.native-scroll { height: auto; overflow: visible; justify-content: flex-start; padding: 90px 0 8px; }
+.work.native-scroll .work-head { margin-top: 0; }
+.work.native-scroll .work-viewport {
+	overflow-x: auto;
+	scroll-snap-type: x proximity;
+	scroll-padding-left: var(--gutter);
+	overscroll-behavior-x: contain;
+	padding-bottom: 14px;
+}
+.work.native-scroll .card, .work.native-scroll .more-cta { scroll-snap-align: start; }
 .work.native-scroll .work-progress { display: none; }
+
+/* last stop of the slide: points down to the SEO and automation grid */
+.more-cta {
+	flex: 0 0 auto;
+	align-self: flex-start;
+	width: min(78vw, 540px, 62vh);
+	aspect-ratio: 16 / 10;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	gap: 6px;
+	padding: 22px 24px;
+	border: 1px dashed rgba(167, 139, 250, 0.55);
+	border-radius: 18px;
+	background: radial-gradient(circle at 20% 10%, rgba(139, 92, 246, 0.28), transparent 65%);
+	position: relative;
+	transition: border-color 0.3s, background 0.3s;
+}
+.more-cta:hover, .more-cta:focus-visible { border-color: var(--accent); background: radial-gradient(circle at 20% 10%, rgba(139, 92, 246, 0.45), transparent 70%); }
+.more-cta:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.more-cta-count { font-family: var(--display); font-weight: 800; font-size: clamp(2rem, 4vw, 3.4rem); line-height: 1; color: var(--accent); }
+.more-cta-title { font-size: 1rem; color: #e7e2fb; }
+.more-cta-go { position: absolute; right: 22px; top: 18px; font-size: 1.6rem; color: var(--accent); }
+
+/* ---------- more work: SEO and automation, a plain grid ---------- */
+.more { position: relative; padding: 110px var(--gutter) 100px; background: var(--bg); }
+.more-head, .more-grid { max-width: 1240px; margin: 0 auto; }
+.more-head { margin-bottom: 40px; }
+.more-head h2 { margin: 0 0 8px; font-weight: 500; }
+.more-head h2 b { color: var(--accent); font-weight: 800; }
+.more-head p { margin: 0; color: var(--muted); }
+.more-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 44px 28px; }
+.more-grid .card { width: auto; }
+.more-grid .card-no { display: none; }
+.more-grid .card-meta { grid-template-columns: 1fr; }
+.more-tile {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 18px;
+	padding: 28px;
+	border: 1px dashed rgba(167, 139, 250, 0.45);
+	border-radius: 18px;
+	background: radial-gradient(circle at 80% 0%, rgba(139, 92, 246, 0.22), transparent 60%);
+}
+.more-tile p { margin: 0; font-family: var(--display); font-weight: 800; font-size: clamp(1.3rem, 2.2vw, 1.8rem); line-height: 1.15; }
+@media (max-width: 1000px) { .more-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .more { padding: 80px var(--gutter) 70px; } .more-grid { grid-template-columns: 1fr; } .more-tile { padding: 22px; } }
 
 /* ---------- tech stack ---------- */
 .stack { position: relative; height: 100vh; height: 100svh; overflow: hidden; }
@@ -604,6 +666,8 @@ h2 .thin { font-weight: 500; color: var(--accent); }
 	.tl-role, .tl-desc { grid-column: 2; text-align: left; padding: 0 0 0 10px; }
 	.tl-desc { margin-top: 10px; }
 
+	.nav a { font-size: 0.7rem; letter-spacing: 0.04em; }
+	.nav nav { gap: 16px; }
 	.work { gap: 18px; }
 	.work-head { margin-top: 60px; }
 	.scroll-cue { display: none; }
